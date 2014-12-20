@@ -20,6 +20,7 @@
   ga('send', 'pageview');
 
 </script>
+<?php include('images.php'); ?>
 
 <!--
 
@@ -83,14 +84,13 @@ Fitvid.js
     
   <div id="middle">
     <div id="middleContainer">
-      
       <div id="homepage" class="active mainElement">
         <div id="homeslides" class="homeSlides" data-cycle-speed="3000" data-cycle-timeout="3600">
           <img src="avedon/images/editorial2/editorial2_2.jpg">
           <img src="avedon/images/figure/figure_25.jpg">
           <img src="avedon/images/liz/Liz_23.jpg">
           <img src="avedon/images/editorial2/editorial2_17.jpg">
-          <img src="avedon/images/artists/Artists_14.jpg">
+          <img src="avedon/images/artists/_Artists_14.jpg">
           <img src="avedon/images/figure/figure_26.jpg">
           <img src="avedon/images/portraits/portraits_24.jpg">
           <img src="avedon/images/backstage/backstage_2.jpg">
@@ -227,7 +227,7 @@ Fitvid.js
           data-cycle-caption=".custom-caption-backstage"
           data-cycle-caption-template="{{slideNum}} / {{slideCount}} &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
         >
-          <img data-cycle-title="Armani &lt;br&gt; Couture" src="avedon/images/backstage/backstage_1.jpg" class="first">
+          <?php printImagesFromFolder('avedon/images/backstage'); ?>
         </div>
       </div>
       
@@ -323,7 +323,7 @@ Fitvid.js
           data-cycle-caption=".custom-caption-artists"
           data-cycle-caption-template="&lt;span class=&quot;slidecount&quot;&gt;{{slideNum}} / {{slideCount}}&lt;/span&gt; &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
         >
-          <img data-cycle-title="Paul Gondry &lt;br&gt; Studio in Brooklyn" src="avedon/images/artists/Artists_14.jpg" class="first">
+          <?php printImagesFromFolder('avedon/images/artists'); ?>
         </div>
       </div>
       
@@ -582,10 +582,6 @@ $(document).ready(function(){
 	
 	//Click Backstage
 	$('div#menucontainer p.backstage').click(function(){
-		if ($('.backstageSlides img.first').length > 0) { 
-			$(backstage).insertAfter('.backstageSlides img.first');
-		}
-		else { }
 		$('div.homeSlides').cycle('pause');
 		$('div#menu').hidemenu();
 		$('.backstageSlides').cycle();
@@ -648,10 +644,6 @@ $(document).ready(function(){
 	
 	//Click Artists
 	$('div#menucontainer p.artists').click(function(){
-		if ($('.artistsSlides img.first').length > 0) { 
-			$(artists).insertAfter('.artistsSlides img.first');
-		}
-		else { }
 		$('div.homeSlides').cycle('pause');
 		$('div#menu').hidemenu();
 		$('.artistsSlides').cycle();
@@ -861,25 +853,6 @@ var misc = '<img data-cycle-title="" src="avedon/images/misc/misc_5.jpg">';
 	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_20.jpg">';
 	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_19.jpg">';
 		  
-var backstage = '<img data-cycle-title="Armani &lt;br&gt; Couture" src="avedon/images/backstage/backstage_3.jpg">';
-	  backstage+= '<img data-cycle-title="Armani &lt;br&gt; Couture" src="avedon/images/backstage/backstage_4.jpg">';
-	  backstage+= '<img data-cycle-title="Lindsey Wixon &lt;br&gt; Giambattista Valli" src="avedon/images/backstage/backstage_5.jpg">';
-	  backstage+= '<img data-cycle-title="Couture Show &lt;br&gt; Paris" src="avedon/images/backstage/backstage_6.jpg">';
-	  backstage+= '<img data-cycle-title="Chanel &lt;br&gt; Couture" src="avedon/images/backstage/backstage_2.jpg">';
-	  backstage+= '<img data-cycle-title="Chanel &lt;br&gt; Couture" src="avedon/images/backstage/backstage_7.jpg">';
-	  backstage+= '<img data-cycle-title="Valentino &lt;br&gt; Couture" src="avedon/images/backstage/backstage_8.jpg">';
-	  backstage+= '<img data-cycle-title="Alexandre Vauthier &lt;br&gt; Couture" src="avedon/images/backstage/backstage_11.jpg">';
-	  backstage+= '<img data-cycle-title="Alexander Wang &lt;br&gt; NYFW" src="avedon/images/backstage/backstage_12.jpg">';
-	  backstage+= '<img data-cycle-title="Lindsey Wixon &lt;br&gt; Versace" src="avedon/images/backstage/backstage_13.jpg">';
-	  backstage+= '<img data-cycle-title="Dior &lt;br&gt; Couture" src="avedon/images/backstage/backstage_14.jpg">';
-	  backstage+= '<img data-cycle-title="Theyskens Theory &lt;br&gt; NYFW" src="avedon/images/backstage/backstage_15.jpg">';
-	  backstage+= '<img data-cycle-title="Giambattista Valli &lt;br&gt; Couture" src="avedon/images/backstage/backstage_16.jpg">';
-	  backstage+= '<img data-cycle-title="Prabel Gurung &lt;br&gt; NYFW" src="avedon/images/backstage/backstage_17.jpg">';
-	  backstage+= '<img data-cycle-title="Armani &lt;br&gt; Couture" src="avedon/images/backstage/backstage_21.jpg">';
-	  backstage+= '<img data-cycle-title="Proenza Schouler &lt;br&gt; NYFW" src="avedon/images/backstage/backstage_22.jpg">';
-	  backstage+= '<img data-cycle-title="Donatella Versace &lt;br&gt; Frontrow Dior" src="avedon/images/backstage/backstage_23.jpg">';
-	  backstage+= '<img data-cycle-title="Raf Simmons, Olivier Bialobos, Bernard Arnault" src="avedon/images/backstage/backstage_24.jpg">';
-	  backstage+= '<img data-cycle-title="Valentino &lt;br&gt; NYFW" src="avedon/images/backstage/backstage_25.jpg">';	  
 
 var editorial2 = '<img data-cycle-title="Emma Ferrer &lt;br&gt; Harper\'s Bazaar" src="avedon/images/editorial2/editorial2_2.jpg">';
 	  editorial2+= '<img data-cycle-title="Emma Ferrer &lt;br&gt; Harper\'s Bazaar" src="avedon/images/editorial2/editorial2_3.jpg">';
@@ -914,20 +887,7 @@ var editorial = '<img data-cycle-title="Kiara Kabukuru &lt;br&gt; Out of Order" 
 	  editorial+= '<img data-cycle-title="Diesel &lt;br&gt; Dazed &amp; Confused" src="avedon/images/editorial/editorial_17.jpg">';
 	  editorial+= '<img data-cycle-title="x Paul Gondry &lt;br&gt; Remix Magazine" src="avedon/images/editorial/editorial_10.jpg">';
 	  editorial+= '<img data-cycle-title="x Alex Hollender &lt;br&gt; Remix Magazine" src="avedon/images/editorial/editorial_11.jpg">';
-	  editorial+= '<img data-cycle-title="x Alex Hollender &lt;br&gt; Remix Magazine" src="avedon/images/editorial/editorial_12.jpg">';        
-
-var artists = '<img data-cycle-title="Herbie Fletcher &lt;br&gt; Shelter Island" src="avedon/images/artists/Artists_13.jpg">';
-	  artists+= '<img data-cycle-title="Ron Gorchov &lt;br&gt; Studio in Brooklyn" src="avedon/images/artists/Artists_1.jpg">';
-	  artists+= '<img data-cycle-title="Peter Beard &lt;br&gt; Home in Montauk" src="avedon/images/artists/Artists_3.jpg">';
-	  artists+= '<img data-cycle-title="Peter Beard &lt;br&gt; Home in Montauk" src="avedon/images/artists/Artists_4.jpg">';
-	  artists+= '<img data-cycle-title="Francesco Clemente &lt;br&gt; Studio on Broadway" src="avedon/images/artists/Artists_5.jpg">';
-	  artists+= '<img data-cycle-title="Joey Frank" src="avedon/images/artists/Artists_6.jpg">';
-	  artists+= '<img data-cycle-title="Terrance Koh &lt;br&gt; Canal Street" src="avedon/images/artists/Artists_7.jpg">';
-	  artists+= '<img data-cycle-title="JR &lt;br&gt; 53rd Street" src="avedon/images/artists/Artists_8.jpg">';
-	  artists+= '<img data-cycle-title="Julien Schnabel &lt;br&gt; Studio in Montauk" src="avedon/images/artists/Artists_9.jpg">';
-	  artists+= '<img data-cycle-title="Chuck Close &lt;br&gt; Bond Street Studio" src="avedon/images/artists/Artists_10.jpg">';
-	  artists+= '<img data-cycle-title="Paul Gondry &lt;br&gt; Studio in Brooklyn" src="avedon/images/artists/Artists_11.jpg">';
-	  artists+= '<img data-cycle-title="Kenny Scharf &lt;br&gt; Studio in Brooklyn" src="avedon/images/artists/Artists_12.jpg">';
+	  editorial+= '<img data-cycle-title="x Alex Hollender &lt;br&gt; Remix Magazine" src="avedon/images/editorial/editorial_12.jpg">';
 	
 </script>
 
