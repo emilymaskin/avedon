@@ -1,0 +1,219 @@
+/*
+Contact Form by html-form-guide.com
+You can customize all the aspects of the form in this style sheet
+All the style elements use form id selector(notice the #contactus). So, including this
+stylesheet does not affect the other elements at all!
+*/
+
+* {
+	-webkit-font-smoothing: antialiased;
+}
+
+*:focus {
+    outline: 0;
+}
+
+div#formHeader {
+	width:600px;
+	height:45px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:22px;
+}
+
+form {
+	width:600px;
+	height:450px;
+}
+
+div#formLeft {
+	width:300px;
+	height:450px;
+	float:left;
+}
+
+#contactus input[type="text"],textarea {
+  font-family : Arial, Verdana, sans-serif;
+  font-size: 10px;
+  text-transform:uppercase;
+  line-height:140%;
+  color : #000; 
+  padding : 3px; 
+  border : 1px solid black;
+}
+
+div.container {
+	width:280px;
+	height:30px;
+	margin:0 0 28px 0;
+}
+
+div.container2 {
+	width:280px;
+	height:30px;
+	margin:0 0 50px 0;
+}
+
+#contactus input#name {
+	width:262px;
+	height:22px;
+}
+
+#contactus input#email {
+	width:262px;
+	height:22px;
+}
+
+#contactus input#dates {
+	width:122px;
+	height:22px;
+	float:left;
+}
+
+#contactus input#location {
+	width:122px;
+	height:22px;
+	float:left;
+	margin:0 0 0 10px;
+}
+
+#contactus textarea {
+  height:100px;
+  width:262px;
+  max-height:100px;
+  max-width:262px;
+}
+
+
+#contactus input[type="text"] {
+  
+}
+
+#contactus input[type="text"]:focus,textarea:focus {
+  color : white;
+  border : 1px solid black;
+  background-color : black;
+  font-weight:bold;
+}
+
+#contactus .error {
+   font-size: 9px;
+   text-transform:uppercase;
+   color: #666;
+   font-family:Arial, Helvetica, sans-serif;
+}
+
+#contactus fieldset#antispam {
+   padding:2px;
+   border-top:1px solid #EEE;
+   border-left:0;
+   border-right:0;
+   border-bottom:0;
+   width:350px;
+}
+
+#contactus fieldset#antispam legend {
+   font-size: 10px;
+   text-transform:uppercase;
+   font-weight:bold;
+   color:#333;   
+}
+
+#contactus .short_explanation {
+   font-family:Arial, Helvetica, sans-serif;
+   font-size: 10px;
+   text-transform:uppercase;
+   color:#333;   
+}
+
+/* spam_trap: This input is hidden. This is here to trick the spam bots*/
+#contactus .spmhidip {
+   display:none;
+   width:10px;
+   height:3px;
+}
+
+#fg_crdiv {
+   font-family : Arial, sans-serif;
+   font-size: 10px;
+   text-transform:uppercase;
+   opacity: .2;
+   -moz-opacity: .2;
+   filter: alpha(opacity=20);   
+}
+
+#fg_crdiv p {
+    display:none;
+}
+
+/*Placeholder text*/
+div#signup div input:focus::-webkit-input-placeholder {
+	color: white;
+}
+
+div#signup div input:focus:-moz-placeholder {
+	color: white;
+}
+
+div#signup div input:focus::-moz-placeholder {
+	color: white;
+}
+
+div#signup div input:focus:-ms-input-placeholder {
+	color: white;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: black;
+	font-size:10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: black;
+	font-size:10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: black;
+	font-size:10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: black;
+	font-size:10px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+div#formRight {
+	width:300px;
+	height:450px;
+	float:left;
+}
+
+div#formRight p {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	line-height:24px;
+	margin:-7px 0 113px 45px;
+}
+
+#contactus input[type="submit"] {
+   width:130px;
+   height:30px;
+   color:white;
+   background:black;
+   border:0;
+   font-family:Arial, Helvetica, sans-serif;
+   text-transform:uppercase;
+   margin-left:45px;
+   letter-spacing:1px;
+}
+
+#contactus input[type="submit"]:hover {
+	cursor:pointer;
+}
+
+#contactus input[type="submit"]:active {
+	background:#666;
+	font-weight:bold;
+}

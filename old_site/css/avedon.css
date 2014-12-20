@@ -1,0 +1,209 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* ALL PAGES */
+@font-face {
+		font-family:AlternateGothic;
+		src: url('/fonts/AlternateGothic.ttf')
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
+div#maincontent {
+	width:890px;
+	height:auto;
+	margin: 0 auto;
+	margin-top:4%;
+	border:0;
+	padding:0;
+}
+
+div#bottombar {
+	width:890px;
+	height:auto;
+	padding-top:5px;
+	
+}
+
+p#logo {
+	float:right;
+	background: url(/images/logo.jpg) left no-repeat;
+	width:165px;
+	height:25px;
+	margin:0;
+	border:0;
+	padding-right:11px;
+	padding-top:3px;
+}
+
+p#logoo {
+	float:right;
+	background: url(/images/logo.jpg) left no-repeat;
+	width:165px;
+	height:25px;
+	margin:0;
+	border:0;
+	padding-right:4px;
+	padding-top:3px;
+}
+
+a {
+	text-decoration:none;
+}
+
+/* MAIN PAGE */
+table#grid {
+	width:873px;
+	height:582px;
+	border-width: 0px;
+	border-spacing: 0px;
+	border-style: hidden;
+	border-collapse: collapse;
+	margin-top:77px;
+}
+
+table#grid td {
+	border-width: 0px;
+	padding: 4px;
+	border-style: none; 
+}
+
+/* SLIDESHOW */
+div#slideshow {
+	width:890;
+	height:616px;
+	padding-bottom:5px;
+}
+	
+	
+ul#slides {
+	list-style-type:none;
+	text-align:center;
+	padding:0;
+	margin:0;
+	border:0;
+	z-index:-10;
+}
+
+div.nav {
+	display:inline;
+	position:absolute;
+	z-index:10;
+	padding-left:815px;
+	padding-top:5px;
+}
+
+/*COLLECTIONS TAB*/
+p#collections {
+	float:left;
+	background: url(/images/collections.jpg) left no-repeat;
+	width:120px;
+	height:25px;
+	margin:0;
+	border:0;
+	padding-top:3px;
+	cursor:pointer;
+}
+
+p#collections:hover {
+	cursor:e-resize;
+}
+
+p#hide {
+	width:516px;
+	float:left;
+	display:inline;
+	font-family:AlternateGothic;
+	font-size:20.5pt;
+	border:0;
+	margin:0;
+	padding:0;
+	padding-bottom:15px;
+	line-height:130%;
+	vertical-align:top;
+}
+
+p#hide a {
+	color:#A9A8A8;
+}
+
+p#hide a:visited {
+	color:#A9A8A8;
+}
+
+p#hide a:hover {
+	border-bottom:3.5px solid black;
+}
+
+a#selected {
+	border-bottom:3.5px solid black;
+}	
+span.space {
+	padding-right:5px;
+	padding-left:5px;
+}
+
+span.space2 {
+	padding-right:3px;
+	padding-left:9px;
+}
+
+div#video {
+	margin:0;
+	border:0;
+	padding-top:110px;
+	padding-bottom:10px;
+}
+
+/*BIO*/
+
+div#bio {
+	width:890;
+	height:584px;
+	padding-top:32px;
+	padding-bottom:5px;
+} 
+
+div.bio {
+	width:413px;
+	height:250px;
+	z-index:10;
+	position:fixed;
+	margin-top:6%;
+	margin-left:3%;
+}
+
+p.topbio {
+	font-family:"Times New Roman", Times, serif;
+	font-size:12px;
+	line-height:18px;
+}
+
+p.biomid {
+	font-family:"Times New Roman", Times, serif;
+	font-size:12px;
+	line-height:14px;
+	font-style:italic;
+	width:280;
+}
+
+p.contact {
+	font-family:"Times New Roman", Times, serif;
+	font-size:12px;
+	line-height:12px;
+}
+
+p.contact a {
+	color:black;
+	text-decoration:none;
+}
+
+p.contact a:hover {
+	opacity:0.6;
+}
+
+p.contact a:visited {
+	color:black;
+}
