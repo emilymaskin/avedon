@@ -259,7 +259,7 @@ Fitvid.js
           data-cycle-caption=".custom-caption-editorial2"
           data-cycle-caption-template="{{slideNum}} / {{slideCount}} &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
         >
-          <img data-cycle-title="Emma Ferrer &lt;br&gt; Harper's Bazaar" src="avedon/images/editorial2/editorial2_1.jpg" class="first">
+          <?php printImagesFromFolder('avedon/images/editorial2'); ?>
         </div>
       </div>
       
@@ -291,7 +291,7 @@ Fitvid.js
           data-cycle-caption=".custom-caption-editorial"
           data-cycle-caption-template="{{slideNum}} / {{slideCount}} &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
         >
-          <img data-cycle-title="Kiara Kabukuru &lt;br&gt; Out of Order" src="avedon/images/editorial/editorial_1.jpg" class="first">
+          <?php printImagesFromFolder('avedon/images/editorial'); ?>
         </div>
       </div>
       
@@ -600,10 +600,6 @@ $(document).ready(function(){
 	
 	//Click Editorial 2
 	$('div#menucontainer p.editorial2').click(function(){
-		if ($('.editorial2Slides img.first').length > 0) { 
-			$(editorial2).insertAfter('.editorial2Slides img.first');
-		}
-		else { }
 		$('div.homeSlides').cycle('pause');
 		$('div#menu').hidemenu();
 		$('.editorial2Slides').cycle();
@@ -622,10 +618,6 @@ $(document).ready(function(){
 	
 	//Click Editorial
 	$('div#menucontainer p.editorial').click(function(){
-		if ($('.editorialSlides img.first').length > 0) { 
-			$(editorial).insertAfter('.editorialSlides img.first');
-		}
-		else { }
 		$('div.homeSlides').cycle('pause');
 		$('div#menu').hidemenu();
 		$('.editorialSlides').cycle();
@@ -852,43 +844,7 @@ var misc = '<img data-cycle-title="" src="avedon/images/misc/misc_5.jpg">';
 	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_17.jpg">';
 	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_20.jpg">';
 	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_19.jpg">';
-		  
 
-var editorial2 = '<img data-cycle-title="Emma Ferrer &lt;br&gt; Harper\'s Bazaar" src="avedon/images/editorial2/editorial2_2.jpg">';
-	  editorial2+= '<img data-cycle-title="Emma Ferrer &lt;br&gt; Harper\'s Bazaar" src="avedon/images/editorial2/editorial2_3.jpg">';
-	  editorial2+= '<img data-cycle-title="Laura Dern &lt;br&gt; Dazed &amp; Confused" src="avedon/images/editorial2/editorial2_4.jpg">';
-	  editorial2+= '<img data-cycle-title="Monogram by Marc Newson &lt;br&gt; Louis Vuitton" src="avedon/images/editorial2/editorial2_5.jpg">';
-	  editorial2+= '<img data-cycle-title="Monogram by Marc Newson &lt;br&gt; Louis Vuitton" src="avedon/images/editorial2/editorial2_6.jpg">';
-	  editorial2+= '<img data-cycle-title="Monogram by Marc Newson &lt;br&gt; Louis Vuitton" src="avedon/images/editorial2/editorial2_13.jpg">';
-	  editorial2+= '<img data-cycle-title="Rare Gems: Gigi Hadid &lt;br&gt; Harper\'s Bazaar" src="avedon/images/editorial2/editorial2_14.jpg">';
-	  editorial2+= '<img data-cycle-title="Rare Gems: Gigi Hadid &lt;br&gt; Harper\'s Bazaar" src="avedon/images/editorial2/editorial2_15.jpg">';
-	  editorial2+= '<img data-cycle-title="Lottie Moss &lt;br&gt; for Calvin Klein" src="avedon/images/editorial2/editorial2_16.jpg">'; 
-	  editorial2+= '<img data-cycle-title="Legends: Julien Dy\'s &lt;br&gt; CR Fashion Book" src="avedon/images/editorial2/editorial2_7.jpg">';
-	  editorial2+= '<img data-cycle-title="Legends: North West &lt;br&gt; CR Fashion Book" src="avedon/images/editorial2/editorial2_8.jpg">';
-	  editorial2+= '<img data-cycle-title="Legends: Serge Lutens &lt;br&gt; CR Fashion Book" src="avedon/images/editorial2/editorial2_9.jpg">';
-	  editorial2+= '<img data-cycle-title="Legends: China Machado &lt;br&gt; CR Fashion Book" src="avedon/images/editorial2/editorial2_10.jpg">';
-	  editorial2+= '<img data-cycle-title="On The Rocks &lt;br&gt; CR Fashion Book" src="avedon/images/editorial2/editorial2_11.jpg">';
-	  editorial2+= '<img data-cycle-title="On The Rocks &lt;br&gt; CR Fashion Book" src="avedon/images/editorial2/editorial2_12.jpg">'; 
-	  
-
-var editorial = '<img data-cycle-title="Kiara Kabukuru &lt;br&gt; Out of Order" src="avedon/images/editorial/editorial_2.jpg">';
-	  editorial+= '<img data-cycle-title="Greta Gerwig &lt;br&gt; Dazed &amp; Confused" src="avedon/images/editorial/editorial_3.jpg">';
-	  editorial+= '<img data-cycle-title="Young Rockers &lt;br&gt; HERO" src="avedon/images/editorial/editorial_15.jpg">';
-	  editorial+= '<img data-cycle-title="Mac Demarco &lt;br&gt; HERO" src="avedon/images/editorial/editorial_13.jpg">';
-	  editorial+= '<img data-cycle-title="Brooke Sheilds &lt;br&gt; Under the Influence" src="avedon/images/editorial/editorial_4.jpg">';
-	  editorial+= '<img data-cycle-title="Nicolas Jaar &lt;br&gt; Dazed &amp; Confused" src="avedon/images/editorial/editorial_14.jpg">';
-	  editorial+= '<img data-cycle-title="Damien Echols &lt;br&gt; Dazed &amp; Confused" src="avedon/images/editorial/editorial_5.jpg">';
-	  editorial+= '<img data-cycle-title="Mary Helen Bowers &lt;br&gt; CR Fashion Book" src="avedon/images/editorial/editorial_6.jpg">';
-	  editorial+= '<img data-cycle-title="Versus Versace Story &lt;br&gt; Dazed &amp; Confused" src="avedon/images/editorial/editorial_7.jpg">';
-	  editorial+= '<img data-cycle-title="Versus Versace Story &lt;br&gt; Dazed &amp; Confused" src="avedon/images/editorial/editorial_8.jpg">';
-	  editorial+= '<img data-cycle-title="Versus Versace Story &lt;br&gt; Dazed &amp; Confused" src="avedon/images/editorial/editorial_9.jpg">';
-	  editorial+= '<img data-cycle-title="Newborns &lt;br&gt; CR Fashion Book" src="avedon/images/editorial/editorial_16.jpg">';
-	  editorial+= '<img data-cycle-title="Couture: Backstage &lt;br&gt; CR Fashion Book" src="avedon/images/editorial/editorial_18.jpg">';
-	  editorial+= '<img data-cycle-title="Diesel &lt;br&gt; Dazed &amp; Confused" src="avedon/images/editorial/editorial_17.jpg">';
-	  editorial+= '<img data-cycle-title="x Paul Gondry &lt;br&gt; Remix Magazine" src="avedon/images/editorial/editorial_10.jpg">';
-	  editorial+= '<img data-cycle-title="x Alex Hollender &lt;br&gt; Remix Magazine" src="avedon/images/editorial/editorial_11.jpg">';
-	  editorial+= '<img data-cycle-title="x Alex Hollender &lt;br&gt; Remix Magazine" src="avedon/images/editorial/editorial_12.jpg">';
-	
 </script>
 
 </body>
