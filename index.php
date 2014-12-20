@@ -131,7 +131,7 @@ Fitvid.js
           data-cycle-caption=".custom-caption-portraits"
           data-cycle-caption-template="{{slideNum}} / {{slideCount}} &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
         >
-          <img data-cycle-title="Philippe de Montebello &lt;br&gt; Former Director of the MET" src="avedon/images/portraits/portraits_38.jpg" class="first">
+          <?php printImagesFromFolder('avedon/images/portraits'); ?>
         </div>
       </div>
         
@@ -369,7 +369,7 @@ Fitvid.js
           data-cycle-caption-template="{{slideNum}} / {{slideCount}} &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
         >
           
-          <img data-cycle-title="" src="avedon/images/misc/misc_6.jpg" class="first">
+          <?php printImagesFromFolder('avedon/images/misc'); ?>
         </div>
       </div>-->
         
@@ -494,10 +494,6 @@ $(document).ready(function(){
 	
 	//Click Portraits
 	$('div#menucontainer p.portraits').click(function(){
-		if ($('.portraitsSlides img.first').length > 0) { 
-			$(portraits).insertAfter('.portraitsSlides img.first');
-		}
-		else { }
 		$('div.homeSlides').cycle('pause');
 		$('div#menu').hidemenu();
 		$('.portraitsSlides').cycle();
@@ -552,10 +548,6 @@ $(document).ready(function(){
 	
 	//Click Miscelaneous
 	$('div#menucontainer p.misc').click(function(){
-		if ($('.miscSlides img.first').length > 0) { 
-			$(misc).insertAfter('.miscSlides img.first');
-		}
-		else { }
 		$('div.homeSlides').cycle('pause');
 		$('div#menu').hidemenu();
 		$('.miscSlides').cycle();
@@ -737,63 +729,6 @@ $(document).ready(function(){
 
 });
 
-// Albums
-var portraits = '<img data-cycle-title="Salman Rushdie &lt;br&gt; Author" src="avedon/images/portraits/portraits_39.jpg">';
-	  portraits+= '<img data-cycle-title="Maura Moynihan &lt;br&gt; Mother" src="avedon/images/portraits/portraits_33.jpg">';
-	  portraits+= '<img data-cycle-title="Futura 2000 &lt;br&gt; Graffiti Artist" src="avedon/images/portraits/portraits_31.jpg">';
-      portraits+= '<img data-cycle-title="Futura 2000 &lt;br&gt; Graffiti Artist" src="avedon/images/portraits/portraits_32.jpg">';
-	  portraits+= '<img data-cycle-title="Toni Garrn &lt;br&gt; Model" src="avedon/images/portraits/portraits_36.jpg">';
-	  portraits+= '<img data-cycle-title="Simon de Pury &lt;br&gt; Art Auctioneer" src="avedon/images/portraits/portraits_37.jpg">';
-	  portraits+= '<img data-cycle-title="Ehteram Barcohana &lt;br&gt; Iranian Immigrant" src="avedon/images/portraits/portraits_34.jpg">';
-	  portraits+= '<img data-cycle-title="Mark Gonzales &lt;br&gt; Skateboarding Pioneer" src="avedon/images/portraits/portraits_35.jpg">';
-	  portraits+= '<img data-cycle-title="Anthony Vaccarello &lt;br&gt; Fashion Designer" src="avedon/images/portraits/portraits_41.jpg">';
-	  portraits+= '<img data-cycle-title="Justin O\'Shea &lt;br&gt; Luxury Fashion Buyer" src="avedon/images/portraits/portraits_1.jpg">';
-	  portraits+= '<img data-cycle-title="James Rudnick &lt;br&gt; Photographer" src="avedon/images/portraits/portraits_2.jpg">';
-	  portraits+= '<img data-cycle-title="Coco Rocha &lt;br&gt; Model" src="avedon/images/portraits/portraits_24.jpg">';
-	  portraits+= '<img data-cycle-title="Camilla Christensen &lt;br&gt; Model" src="avedon/images/portraits/portraits_3.jpg">';
-	  portraits+= '<img data-cycle-title="Jeffrey Lieberman &lt;br&gt; Chairman of Psychiatry, Columbia University" src="avedon/images/portraits/portraits_4.jpg">';
-	  portraits+= '<img data-cycle-title="Nate Naylor &lt;br&gt; Creative Director" src="avedon/images/portraits/portraits_5.jpg">';
-	  portraits+= '<img data-cycle-title="Justin O\'Shea &lt;br&gt; Luxury Fashion Buyer" src="avedon/images/portraits/portraits_29.jpg">';
-	  portraits+= '<img data-cycle-title="Julius Wilson &lt;br&gt; Head of African American Studies, Harvard" src="avedon/images/portraits/portraits_6.jpg">';
-	  portraits+= '<img data-cycle-title="Makua Rothman &lt;br&gt; Professional Big Wave Surfer" src="avedon/images/portraits/portraits_7.jpg">';
-	  portraits+= '<img data-cycle-title="Two Dancers" src="avedon/images/portraits/portraits_28.jpg">';
-	  portraits+= '<img data-cycle-title="Grace Coddington &lt;br&gt; Creative Director, Vogue" src="avedon/images/portraits/portraits_30.jpg">';
-	  portraits+= '<img data-cycle-title="Nic Neiman &lt;br&gt; Model" src="avedon/images/portraits/portraits_8.jpg">';
-	  portraits+= '<img data-cycle-title="Nic Neiman &lt;br&gt; Model" src="avedon/images/portraits/portraits_9.jpg">';
-	  portraits+= '<img data-cycle-title="Kiara Kabukuru &lt;br&gt; Model" src="avedon/images/portraits/portraits_25.jpg">';
-	  portraits+= '<img data-cycle-title="Maura Moynihan &lt;br&gt; Mother" src="avedon/images/portraits/portraits_11.jpg">';
-	  portraits+= '<img data-cycle-title="Young Boy &lt;br&gt; Bridgehampton" src="avedon/images/portraits/portraits_10.jpg">';
-	  portraits+= '<img data-cycle-title="Mikhail Baryshnikov" src="avedon/images/portraits/portraits_12.jpg">';
-	  portraits+= '<img data-cycle-title="Jan-Emmanuel De Neve &lt;br&gt; Professor of Economics" src="avedon/images/portraits/portraits_13.jpg">';
-	  portraits+= '<img data-cycle-title="Bob Kerrey &lt;br&gt; Senator" src="avedon/images/portraits/portraits_27.jpg">';
-	  portraits+= '<img data-cycle-title="Self Portrait" src="avedon/images/portraits/portraits_14.jpg">';
-	  portraits+= '<img data-cycle-title="Homeless Man &lt;br&gt; in Central Park" src="avedon/images/portraits/portraits_15.jpg">';
-	  portraits+= '<img data-cycle-title="Johan Lindeberg &lt;br&gt; Fashion Designer" src="avedon/images/portraits/portraits_16.jpg">';
-	  portraits+= '<img data-cycle-title="Man &lt;br&gt; in Coney Island" src="avedon/images/portraits/portraits_17.jpg">';
-	  portraits+= '<img data-cycle-title="Woman &lt;br&gt; in bed" src="avedon/images/portraits/portraits_18.jpg">';
-	  portraits+= '<img data-cycle-title="Two men &lt;br&gt; in the Lake of Zurich" src="avedon/images/portraits/portraits_19.jpg">';
-	  portraits+= '<img data-cycle-title="Jacob Holdt &lt;br&gt; Social Activist" src="avedon/images/portraits/portraits_20.jpg">';
-	  portraits+= '<img data-cycle-title="Ruth Prawer Jhabvala &lt;br&gt; Author" src="avedon/images/portraits/portraits_21.jpg">';
-	  portraits+= '<img data-cycle-title="John Waters &lt;br&gt; Director" src="avedon/images/portraits/portraits_22.jpg">';
-	  portraits+= '<img data-cycle-title="Leo Fitzpatrick &lt;br&gt; Actor" src="avedon/images/portraits/portraits_23.jpg">';
-	  portraits+= '<img data-cycle-title="BJ Penn &lt;br&gt; North Shore Surfer" src="avedon/images/portraits/portraits_26.jpg">';
-
-		  
-var misc = '<img data-cycle-title="" src="avedon/images/misc/misc_5.jpg">';
-	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_4.jpg">';
-	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_8.jpg">';
-	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_9.jpg">';
-	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_15.jpg">';
-	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_1.jpg">';
-	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_2.jpg">';
-	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_11.jpg">';
-	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_12.jpg">';
-	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_13.jpg">';
-	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_14.jpg">';
-	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_16.jpg">';
-	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_17.jpg">';
-	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_20.jpg">';
-	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_19.jpg">';
 
 </script>
 
