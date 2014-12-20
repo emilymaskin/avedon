@@ -163,7 +163,7 @@ Fitvid.js
           data-cycle-caption=".custom-caption-figure"
           data-cycle-caption-template="{{slideNum}} / {{slideCount}} &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
         >
-          <img data-cycle-title="" src="avedon/images/figure/figure_9.jpg" class="first">
+          <?php printImagesFromFolder('avedon/images/figure'); ?>
         </div>
       </div>
       
@@ -195,7 +195,7 @@ Fitvid.js
           data-cycle-caption=".custom-caption-liz"
           data-cycle-caption-template="{{slideNum}} / {{slideCount}} &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
         >
-          <img data-cycle-title="" src="avedon/images/liz/Liz_18.jpg" class="first">
+          <?php printImagesFromFolder('avedon/images/liz'); ?>
         </div>
       </div>
       
@@ -516,10 +516,6 @@ $(document).ready(function(){
 	
 	//Click Figure
 	$('div#menucontainer p.figure').click(function(){
-		if ($('.figureSlides img.first').length > 0) { 
-			$(figure).insertAfter('.figureSlides img.first');
-		}
-		else { }
 		$('div.homeSlides').cycle('pause');
 		$('div#menu').hidemenu();
 		$('.figureSlides').cycle();
@@ -538,10 +534,6 @@ $(document).ready(function(){
 	
 	//Click Elizabeth
 	$('div#menucontainer p.liz').click(function(){
-		if ($('.lizSlides img.first').length > 0) { 
-			$(liz).insertAfter('.lizSlides img.first');
-		}
-		else { }
 		$('div.homeSlides').cycle('pause');
 		$('div#menu').hidemenu();
 		$('.lizSlides').cycle();
@@ -785,49 +777,7 @@ var portraits = '<img data-cycle-title="Salman Rushdie &lt;br&gt; Author" src="a
 	  portraits+= '<img data-cycle-title="John Waters &lt;br&gt; Director" src="avedon/images/portraits/portraits_22.jpg">';
 	  portraits+= '<img data-cycle-title="Leo Fitzpatrick &lt;br&gt; Actor" src="avedon/images/portraits/portraits_23.jpg">';
 	  portraits+= '<img data-cycle-title="BJ Penn &lt;br&gt; North Shore Surfer" src="avedon/images/portraits/portraits_26.jpg">';
-	  
 
-var figure = '<img data-cycle-title="" src="avedon/images/figure/figure_21.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_4.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_12.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_3.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_8.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_14.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_22.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_1.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_5.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_6.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_17.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_7.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_23.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_11.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_10.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_24.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_20.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_2.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_18.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_13.jpg">';
-	  figure+= '<img data-cycle-title="" src="avedon/images/figure/figure_15.jpg">';
-
-var liz = '<img data-cycle-title="" src="avedon/images/liz/Liz_19.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_20.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_21.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_22.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_23.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_6.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_2.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_8.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_15.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_16.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_7.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_4.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_9.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_3.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_10.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_12.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_5.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_13.jpg">';
-	  liz+= '<img data-cycle-title="" src="avedon/images/liz/Liz_11.jpg">';
 		  
 var misc = '<img data-cycle-title="" src="avedon/images/misc/misc_5.jpg">';
 	  misc+= '<img data-cycle-title="" src="avedon/images/misc/misc_4.jpg">';
