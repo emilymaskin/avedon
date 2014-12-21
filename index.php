@@ -93,19 +93,19 @@ Fitvid.js
         </div>
       </div>
       
-      <?php section('portraits'); ?>
+      <?php section('portraits', 'Portraits'); ?>
         
-      <?php section('figure'); ?>
+      <?php section('figure', 'Figure'); ?>
       
-      <?php section('liz'); ?>
+      <?php section('liz', 'Elizabeth'); ?>
       
-      <?php section('backstage'); ?>
+      <?php section('backstage', 'Backstage'); ?>
       
-      <?php section('editorial2'); ?>
+      <?php section('editorial2', 'Editorial II'); ?>
       
-      <?php section('editorial'); ?>
+      <?php section('editorial', 'Editorial I'); ?>
       
-      <?php section('artists'); ?>
+      <?php section('artists', 'Artists'); ?>
       
       <!-- RVCA -->
       <!--<div id="rvca" class="mainElement">
@@ -120,7 +120,7 @@ Fitvid.js
         </div>
       </div>-->
       
-      <!--<?php section('misc'); ?>-->
+      <!--<?php section('misc', 'Miscellaneous'); ?>-->
     </div>
   </div>
   <div id="bottom">

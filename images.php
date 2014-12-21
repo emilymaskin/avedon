@@ -9,7 +9,7 @@
     }
   }
 
-  function section($category) {
+  function section($category, $title) {
     echo "<div id='" . $category . "' class='mainElement'>"
       . "<div id='cursorControls'>"
       . "<p id='left' class='prev'></p>"
@@ -18,7 +18,7 @@
       . "<div class='slidecontrols'>"
       . "<div class='captions'>"
       . "<p class='custom-caption-" . $category . "'></p>"
-      . "<p class='albumtitle'><span class='italic'>" . $category . "</span></p>"
+      . "<p class='albumtitle'><span class='italic'>" . $title . "</span></p>"
       . "<div class='PrevNext'>"
       . "<p class='prev prevButton'>Prev /</p>"
       . "<p class='next nextButton'>&nbsp;Next</p>"
