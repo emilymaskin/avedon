@@ -56,32 +56,22 @@ Mousetrap.js
 Fitvid.js
 -->
 
-<style type="text/css">
-
-</style>
-
 </head>
-
-
 
 <body>
 <div id="screen"></div>
-
 <div id="intro">
   <div id="introTitle">
     <p><span>MICHAEL</span> AVEDON</p>
     <div>ENTER</div>
   </div>
 </div>
-
 <div id="siteContainer">
-
   <div id="top">
     <div>
       <p><span>MICHAEL</span> AVEDON</p>
     </div>
   </div>
-    
   <div id="middle">
     <div id="middleContainer">
       <div id="homepage" class="active mainElement">
@@ -103,229 +93,19 @@ Fitvid.js
         </div>
       </div>
       
-      <!-- PORTRAITS -->
-      <div id="portraits" class="mainElement">
-        <div id="cursorControls">
-          <p id="left" class="prev"></p>
-          <p id="right" class="next"></p>
-        </div>
-        <div class="slidecontrols">
-          <div class="captions">
-            <p class="custom-caption-portraits"></p>
-            <p class="albumtitle"><span class="italic">Portraits</span></p>
-            <div class="PrevNext">
-              <p class="prev prevButton">Prev /</p> 
-              <p class="next nextButton">&nbsp;Next</p>
-            </div>
-            <p class="instructions">&hArr; use arrow keys to navigate</p>
-          </div>
-        </div>
-        <div class="portraitsSlides allSlides" 
-          data-cycle-speed="1200"
-          data-cycle-timeout="0"
-          data-cycle-manual-fx="scrollHorz"
-          data-cycle-easing="easeInOutSine"
-          data-cycle-swipe="true"
-          data-cycle-prev=".prev"
-          data-cycle-next=".next"
-          data-cycle-caption=".custom-caption-portraits"
-          data-cycle-caption-template="{{slideNum}} / {{slideCount}} &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
-        >
-          <?php printImagesFromFolder('avedon/images/portraits'); ?>
-        </div>
-      </div>
+      <?php section('portraits'); ?>
         
-      <!-- FIGURE -->
-      <div id="figure" class="mainElement">
-        <div id="cursorControls">
-          <p id="left" class="prev"></p>
-          <p id="right" class="next"></p>
-        </div>
-        <div class="slidecontrols">
-          <div class="captions">
-            <p class="custom-caption-figure"></p>
-            <p class="albumtitle"><span class="italic">Figure</span></p>
-            <div class="PrevNext">
-              <p class="prev prevButton">Prev /</p> 
-              <p class="next nextButton">&nbsp;Next</p>
-            </div>
-            <p class="instructions">&hArr; use arrow keys to navigate</p>
-          </div>
-        </div>
-        <div class="figureSlides allSlides" 
-          data-cycle-speed="1200"
-          data-cycle-timeout="0"
-          data-cycle-manual-fx="scrollHorz"
-          data-cycle-easing="easeInOutSine"
-          data-cycle-swipe="true"
-          data-cycle-prev=".prev"
-          data-cycle-next=".next"
-          data-cycle-caption=".custom-caption-figure"
-          data-cycle-caption-template="{{slideNum}} / {{slideCount}} &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
-        >
-          <?php printImagesFromFolder('avedon/images/figure'); ?>
-        </div>
-      </div>
+      <?php section('figure'); ?>
       
-      <!-- LIZ -->
-      <div id="liz" class="mainElement">
-        <div id="cursorControls">
-          <p id="left" class="prev"></p>
-          <p id="right" class="next"></p>
-        </div>
-        <div class="slidecontrols">
-          <div class="captions">
-            <p class="custom-caption-liz"></p>
-            <p class="albumtitle"><span class="italic">Elizabeth</span></p>
-            <div class="PrevNext">
-              <p class="prev prevButton">Prev /</p> 
-              <p class="next nextButton">&nbsp;Next</p>
-            </div>
-            <p class="instructions">&hArr; use arrow keys to navigate</p>
-          </div>
-        </div>
-        <div class="lizSlides allSlides" 
-          data-cycle-speed="1200"
-          data-cycle-timeout="0"
-          data-cycle-manual-fx="scrollHorz"
-          data-cycle-easing="easeInOutSine"
-          data-cycle-swipe="true"
-          data-cycle-prev=".prev"
-          data-cycle-next=".next"
-          data-cycle-caption=".custom-caption-liz"
-          data-cycle-caption-template="{{slideNum}} / {{slideCount}} &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
-        >
-          <?php printImagesFromFolder('avedon/images/liz'); ?>
-        </div>
-      </div>
+      <?php section('liz'); ?>
       
-      <!-- BACKSTAGE -->
-      <div id="backstage" class="mainElement">
-        <div id="cursorControls">
-          <p id="left" class="prev"></p>
-          <p id="right" class="next"></p>
-        </div>
-        <div class="slidecontrols">
-          <div class="captions">
-            <p class="custom-caption-backstage"></p>
-            <p class="albumtitle"><span class="italic">Backstage</span></p>
-            <div class="PrevNext">
-              <p class="prev prevButton">Prev /</p> 
-              <p class="next nextButton">&nbsp;Next</p>
-            </div>
-            <p class="instructions">&hArr; use arrow keys to navigate</p>
-          </div>
-        </div>
-        <div class="backstageSlides allSlides" 
-          data-cycle-speed="1200"
-          data-cycle-timeout="0"
-          data-cycle-manual-fx="scrollHorz"
-          data-cycle-easing="easeInOutSine"
-          data-cycle-swipe="true"
-          data-cycle-prev=".prev"
-          data-cycle-next=".next"
-          data-cycle-caption=".custom-caption-backstage"
-          data-cycle-caption-template="{{slideNum}} / {{slideCount}} &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
-        >
-          <?php printImagesFromFolder('avedon/images/backstage'); ?>
-        </div>
-      </div>
+      <?php section('backstage'); ?>
       
-      <!-- EDITORIAL 2 -->
-      <div id="editorial2" class="mainElement">
-        <div id="cursorControls">
-          <p id="left" class="prev"></p>
-          <p id="right" class="next"></p>
-        </div>
-        <div class="slidecontrols">
-          <div class="captions">
-            <p class="custom-caption-editorial2"></p>
-            <p class="albumtitle"><span class="italic">Editorial I</span></p>
-            <div class="PrevNext">
-              <p class="prev prevButton">Prev /</p> 
-              <p class="next nextButton">&nbsp;Next</p>
-            </div>
-            <p class="instructions">&hArr; use arrow keys to navigate</p>
-          </div>
-        </div>
-        <div class="editorial2Slides allSlides" 
-          data-cycle-speed="1200"
-          data-cycle-timeout="0"
-          data-cycle-manual-fx="scrollHorz"
-          data-cycle-easing="easeInOutSine"
-          data-cycle-swipe="true"
-          data-cycle-prev=".prev"
-          data-cycle-next=".next"
-          data-cycle-caption=".custom-caption-editorial2"
-          data-cycle-caption-template="{{slideNum}} / {{slideCount}} &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
-        >
-          <?php printImagesFromFolder('avedon/images/editorial2'); ?>
-        </div>
-      </div>
+      <?php section('editorial2'); ?>
       
-      <!-- EDITORIAL -->
-      <div id="editorial" class="mainElement">
-        <div id="cursorControls">
-          <p id="left" class="prev"></p>
-          <p id="right" class="next"></p>
-        </div>
-        <div class="slidecontrols">
-          <div class="captions">
-            <p class="custom-caption-editorial"></p>
-            <p class="albumtitle"><span class="italic">Editorial II</span></p>
-            <div class="PrevNext">
-              <p class="prev prevButton">Prev /</p> 
-              <p class="next nextButton">&nbsp;Next</p>
-            </div>
-            <p class="instructions">&hArr; use arrow keys to navigate</p>
-          </div>
-        </div>
-        <div class="editorialSlides allSlides" 
-          data-cycle-speed="1200"
-          data-cycle-timeout="0"
-          data-cycle-manual-fx="scrollHorz"
-          data-cycle-easing="easeInOutSine"
-          data-cycle-swipe="true"
-          data-cycle-prev=".prev"
-          data-cycle-next=".next"
-          data-cycle-caption=".custom-caption-editorial"
-          data-cycle-caption-template="{{slideNum}} / {{slideCount}} &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
-        >
-          <?php printImagesFromFolder('avedon/images/editorial'); ?>
-        </div>
-      </div>
+      <?php section('editorial'); ?>
       
-      <!-- ARTISTS -->
-      <div id="artists" class="mainElement">
-        <div id="cursorControls">
-          <p id="left" class="prev"></p>
-          <p id="right" class="next"></p>
-        </div>
-        <div class="slidecontrols">
-          <div class="captions">
-            <p class="custom-caption-artists"></p>
-            <p class="albumtitle"><span class="italic">Artists</span></p>
-            <div class="PrevNext">
-              <p class="prev prevButton">Prev /</p> 
-              <p class="next nextButton">&nbsp;Next</p>
-            </div>
-            <p class="instructions">&hArr; use arrow keys to navigate</p>
-          </div>
-        </div>
-        <div class="artistsSlides allSlides" 
-          data-cycle-speed="1200"
-          data-cycle-timeout="0"
-          data-cycle-manual-fx="scrollHorz"
-          data-cycle-easing="easeInOutSine"
-          data-cycle-swipe="true"
-          data-cycle-prev=".prev"
-          data-cycle-next=".next"
-          data-cycle-caption=".custom-caption-artists"
-          data-cycle-caption-template="&lt;span class=&quot;slidecount&quot;&gt;{{slideNum}} / {{slideCount}}&lt;/span&gt; &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
-        >
-          <?php printImagesFromFolder('avedon/images/artists'); ?>
-        </div>
-      </div>
+      <?php section('artists'); ?>
       
       <!-- RVCA -->
       <!--<div id="rvca" class="mainElement">
@@ -340,48 +120,14 @@ Fitvid.js
         </div>
       </div>-->
       
-      <!-- MISC -->
-      <!--<div id="misc" class="mainElement">
-        <div id="cursorControls">
-          <p id="left" class="prev"></p>
-          <p id="right" class="next"></p>
-        </div>
-        <div class="slidecontrols">
-          <div class="captions">
-            <p class="custom-caption-misc"></p>
-            <p class="albumtitle"><span class="italic">Miscellaneous</span></p>
-            <div class="PrevNext">
-              <p class="prev prevButton">Prev /</p> 
-              <p class="next nextButton">&nbsp;Next</p>
-            </div>
-            <p class="instructions">&hArr; use arrow keys to navigate</p>
-          </div>
-        </div>
-        <div class="miscSlides allSlides" 
-          data-cycle-speed="1200"
-          data-cycle-timeout="0"
-          data-cycle-manual-fx="scrollHorz"
-          data-cycle-easing="easeInOutSine"
-          data-cycle-swipe="true"
-          data-cycle-prev=".prev"
-          data-cycle-next=".next"
-          data-cycle-caption=".custom-caption-misc"
-          data-cycle-caption-template="{{slideNum}} / {{slideCount}} &lt;br&gt; &lt;br&gt; {{cycleTitle}}"
-        >
-          
-          <?php printImagesFromFolder('avedon/images/misc'); ?>
-        </div>
-      </div>-->
-        
+      <!--<?php section('misc'); ?>-->
     </div>
   </div>
-    
   <div id="bottom">
     <div>
       <p>MENU</p>
     </div>
   </div>
-
 </div>
 
 <div id="menu">
@@ -417,7 +163,7 @@ Fitvid.js
   <p class="infoText">Michael Avedon, a graduate of the International Center of 
   Photography, has begun to develop his photographic 
   perspective over the past four years in New York City. 
-  Working primarily with black & white 35mm and medium 
+  Working primarily with black &amp; white 35mm and medium 
   format film, his portfolio thus far depicts portraits of 
   artists, creators, politicians, and relatives. A determination 
   to expound his visual understanding of everything from 
@@ -436,7 +182,6 @@ Fitvid.js
   <div id="closeContact"><span>close</span></div>
 </div>
 
-
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script type="text/javascript" src='avedon/js/jquery.cycle2.min.js'></script>
@@ -445,292 +190,7 @@ Fitvid.js
 <script type="text/javascript" src='avedon/js/swipe.js'></script>
 <script type="text/javascript" src='avedon/js/jquery.touchSwipe.min.js'></script>
 <script type="text/javascript" src='avedon/js/jquery.fitvids.js'></script>
-<script type="text/javascript">
-
-$(document).ready(function(){
-	
-	//Fade intro screen in
-	$('div#introTitle').fadeIn(1400, 'easeInQuint', function(){
-      $('div#introTitle div').addClass('show', 500);
-	});
-	
-	//Fade intro screen out
-	$('div#introTitle div').click(function(){
-	  $('div#introTitle').fadeOut(1200, function(){
-		$('.homeSlides').cycle();
-		$('div#siteContainer').fadeIn(1800, function() {	
-		  $('div#intro').hide();
-		});
-	  });
-	});
-	
-	//Menu container show
-	$('div#bottom div p').click(function(){
-		$(this).fadeOut('fast', function(){
-		  $('div#menu').slideDown(400);
-		});
-		$('div#screen').fadeIn('slow');
-	});
-	
-	//Hide Menu Function
-	jQuery.fn.extend({
-    hidemenu: function () {
-        $('div#menu').slideUp(400, function(){
-			$('div#bottom div p').fadeIn('fast');
-		});
-		$('div#screen').fadeOut('slow');
-		}
-	});
-	
-	//Menu container hide on mouseleave
-	$('div#menu').mouseleave(function(){
-		$('div#menu').hidemenu();
-	});
-	
-	//Menu container hide on click
-	$('div#screen').click(function(){
-		$('div#menu').hidemenu();
-	});
-	
-	//Click Portraits
-	$('div#menucontainer p.portraits').click(function(){
-		$('div.homeSlides').cycle('pause');
-		$('div#menu').hidemenu();
-		$('.portraitsSlides').cycle();
-		$('.portraitsSlides').cycle('goto', 0);
-		$('div.active').fadeOut(1000, function(){
-		  $('div#portraits').fadeIn(1200, function(){
-			  $('div#bottom div p').fadeIn(600);
-			  $('div.mainElement').removeClass('active');
-			  $('div#portraits').addClass('active');
-			  $('div#menucontainer p.album').removeClass('selected');
-			  $('div#menucontainer p.portraits').addClass('selected');
-			  $('.portraitsSlides img.first').removeClass('first');
-		  });
-		});
-	});
-	
-	//Click Figure
-	$('div#menucontainer p.figure').click(function(){
-		$('div.homeSlides').cycle('pause');
-		$('div#menu').hidemenu();
-		$('.figureSlides').cycle();
-		$('.figureSlides').cycle('goto', 0);
-		$('div.active').fadeOut(1000, function(){
-		  $('div#figure').fadeIn(1200, function(){
-			  $('div#bottom div p').fadeIn(600);
-			  $('div.mainElement').removeClass('active');
-			  $('div#figure').addClass('active');
-			  $('div#menucontainer p.album').removeClass('selected');
-			  $('div#menucontainer p.figure').addClass('selected');
-			  $('.figureSlides img.first').removeClass('first');
-		  });
-		});
-	});
-	
-	//Click Elizabeth
-	$('div#menucontainer p.liz').click(function(){
-		$('div.homeSlides').cycle('pause');
-		$('div#menu').hidemenu();
-		$('.lizSlides').cycle();
-		$('.lizSlides').cycle('goto', 0);
-		$('div.active').fadeOut(1000, function(){
-		  $('div#liz').fadeIn(1200, function(){
-			  $('div#bottom div p').fadeIn(600);
-			  $('div.mainElement').removeClass('active');
-			  $('div#liz').addClass('active');
-			  $('div#menucontainer p.album').removeClass('selected');
-			  $('div#menucontainer p.liz').addClass('selected');
-			  $('.lizSlides img.first').removeClass('first');
-		  });
-		});
-	});
-	
-	//Click Miscelaneous
-	$('div#menucontainer p.misc').click(function(){
-		$('div.homeSlides').cycle('pause');
-		$('div#menu').hidemenu();
-		$('.miscSlides').cycle();
-		$('.miscSlides').cycle('goto', 0);
-		$('div.active').fadeOut(1000, function(){
-		  $('div#misc').fadeIn(1200, function(){
-			  $('div#bottom div p').fadeIn(600);
-			  $('div.mainElement').removeClass('active');
-			  $('div#misc').addClass('active');
-			  $('div#menucontainer p.album').removeClass('selected');
-			  $('div#menucontainer p.misc').addClass('selected');
-			  $('.miscSlides img.first').removeClass('first');
-		  });
-		});
-	});
-	
-	//Click Backstage
-	$('div#menucontainer p.backstage').click(function(){
-		$('div.homeSlides').cycle('pause');
-		$('div#menu').hidemenu();
-		$('.backstageSlides').cycle();
-		$('.backstageSlides').cycle('goto', 0);
-		$('div.active').fadeOut(1000, function(){
-		  $('div#backstage').fadeIn(1200, function(){
-			  $('div#bottom div p').fadeIn(600);
-			  $('div.mainElement').removeClass('active');
-			  $('div#backstage').addClass('active');
-			  $('div#menucontainer p.album').removeClass('selected');
-			  $('div#menucontainer p.backstage').addClass('selected');
-			  $('.backstageSlides img.first').removeClass('first');
-		  });
-		});
-	});
-	
-	//Click Editorial 2
-	$('div#menucontainer p.editorial2').click(function(){
-		$('div.homeSlides').cycle('pause');
-		$('div#menu').hidemenu();
-		$('.editorial2Slides').cycle();
-		$('.editorial2Slides').cycle('goto', 0);
-		$('div.active').fadeOut(1000, function(){
-		  $('div#editorial2').fadeIn(1200, function(){
-			  $('div#bottom div p').fadeIn(600);
-			  $('div.mainElement').removeClass('active');
-			  $('div#editorial2').addClass('active');
-			  $('div#menucontainer p.album').removeClass('selected');
-			  $('div#menucontainer p.editorial2').addClass('selected');
-			  $('.editorial2Slides img.first').removeClass('first');
-		  });
-		});
-	});
-	
-	//Click Editorial
-	$('div#menucontainer p.editorial').click(function(){
-		$('div.homeSlides').cycle('pause');
-		$('div#menu').hidemenu();
-		$('.editorialSlides').cycle();
-		$('.editorialSlides').cycle('goto', 0);
-		$('div.active').fadeOut(1000, function(){
-		  $('div#editorial').fadeIn(1200, function(){
-			  $('div#bottom div p').fadeIn(600);
-			  $('div.mainElement').removeClass('active');
-			  $('div#editorial').addClass('active');
-			  $('div#menucontainer p.album').removeClass('selected');
-			  $('div#menucontainer p.editorial').addClass('selected');
-			  $('.editorialSlides img.first').removeClass('first');
-		  });
-		});
-	});
-	
-	//Click Artists
-	$('div#menucontainer p.artists').click(function(){
-		$('div.homeSlides').cycle('pause');
-		$('div#menu').hidemenu();
-		$('.artistsSlides').cycle();
-		$('.artistsSlides').cycle('goto', 0);
-		$('div.active').fadeOut(1000, function(){
-		  $('div#artists').fadeIn(1200, function(){
-			  $('div#bottom div p').fadeIn(600);
-			  $('div.mainElement').removeClass('active');
-			  $('div#artists').addClass('active');
-			  $('div#menucontainer p.album').removeClass('selected');
-			  $('div#menucontainer p.artists').addClass('selected');
-			  $('.artistsSlides img.first').removeClass('first');
-		  });
-		});
-	});
-	
-	//Click RVCA
-	$('div#menucontainer p.rvca').click(function(){
-		$('div.homeSlides').cycle('pause');
-		$('div#menu').hidemenu();
-		$('div.active').fadeOut(1000, function(){
-		  $('div#rvca').fadeIn(1200, function(){
-			  $('div#bottom div p').fadeIn(600);
-			  $('div.mainElement').removeClass('active');
-			  $('div#rvca').addClass('active');
-			  $('div#menucontainer p.album').removeClass('selected');
-			  $('div#menucontainer p.rvca').addClass('selected');
-		  });
-		});
-	});
-	
-	//Click image for next slide
-	$('div.allSlides img').click(function(){
-		$('div.allSlides').cycle('next');
-	});
-	
-	//Show contact
-	$('#menucontainer p.contactLink').click(function(){
-		$('div#menu').hidemenu();
- 		$('div#siteContainer').fadeOut(800, function(){
-		  $('div#contactCont').show();
-		  $('div#contactCont').animate({
-			  opacity:1
-		  }, 900, function(){
-			$('.homeSlides').cycle('pause');
-		  });
-		});
-	});
-	
-	//Hide contact
-	$('div#closeContact').click(function(){
-		$('div#contactCont').animate({
-			opacity:0
-		}, 900, function(){
-			$('div#contactCont').hide();
-		});
-		$('div#siteContainer').fadeIn(800);
-		$('.homeSlides').cycle('resume');
-	});
-	
-	//Show bio
-	$('#menucontainer p.bioLink').click(function(){
-		$('div#menu').hidemenu();
- 		$('div#siteContainer').fadeOut(800, function(){
-		  $('div#bioContainer').show();
-		  $('div#bioContainer').animate({
-			  opacity:1
-		  }, 900, function(){
-			$('.homeSlides').cycle('pause');
-		  });
-		});
-	});
-	
-	//Hide bio
-	$('div#closeBio').click(function(){
-		$('div#bioContainer').animate({
-			opacity:0
-		}, 900, function(){
-			$('div#bioContainer').hide();
-		});
-		$('div#siteContainer').fadeIn(800);
-		$('.homeSlides').cycle('resume');
-	});
-	
-	//Keyboard controls
-	Mousetrap.bind('right', function() { 
-	  $('.allSlides').cycle('next');
-	  });
-	  
-	Mousetrap.bind('left', function() { 
-	  $('.allSlides').cycle('prev');
-	  });
-	
-	Mousetrap.bind('up', function() { 
-	  $('div#menu').hidemenu();
-	});
-	
-	Mousetrap.bind('down', function() {   
-	  $('div#bottom div p').fadeOut('fast', function(){
-		  $('div#menu').slideDown(400);
-		});
-		$('div#screen').fadeIn('slow');
-	});
-	
-	//Responsive Video handler
-	$("#rvcaVideo").fitVids();
-
-});
-
-
-</script>
+<script type="text/javascript" src='avedon/js/main.js'></script>
 
 </body>
 </html>
