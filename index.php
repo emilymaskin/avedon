@@ -26,25 +26,25 @@
 
 SITE DESIGNED + BUILT BY
 
- ______   ___                    
-/\  _  \ /\_ \                   
-\ \ \L\ \\//\ \      __   __  _  
- \ \  __ \ \ \ \   /'__`\/\ \/'\ 
-  \ \ \/\ \ \_\ \_/\  __/\/>  </ 
+ ______   ___
+/\  _  \ /\_ \
+\ \ \L\ \\//\ \      __   __  _
+ \ \  __ \ \ \ \   /'__`\/\ \/'\
+  \ \ \/\ \ \_\ \_/\  __/\/>  </
    \ \_\ \_\/\____\ \____\/\_/\_\
     \/_/\/_/\/____/\/____/\//\/_/
-                                 
-                                 
- __  __          ___    ___                      __                  
-/\ \/\ \        /\_ \  /\_ \                    /\ \                 
-\ \ \_\ \    ___\//\ \ \//\ \      __    ___    \_\ \     __   _ __  
- \ \  _  \  / __`\\ \ \  \ \ \   /'__`\/' _ `\  /'_` \  /'__`\/\`'__\
-  \ \ \ \ \/\ \L\ \\_\ \_ \_\ \_/\  __//\ \/\ \/\ \L\ \/\  __/\ \ \/ 
-   \ \_\ \_\ \____//\____\/\____\ \____\ \_\ \_\ \___,_\ \____\\ \_\ 
-    \/_/\/_/\/___/ \/____/\/____/\/____/\/_/\/_/\/__,_ /\/____/ \/_/ 
-    
 
-    
+
+ __  __          ___    ___                      __
+/\ \/\ \        /\_ \  /\_ \                    /\ \
+\ \ \_\ \    ___\//\ \ \//\ \      __    ___    \_\ \     __   _ __
+ \ \  _  \  / __`\\ \ \  \ \ \   /'__`\/' _ `\  /'_` \  /'__`\/\`'__\
+  \ \ \ \ \/\ \L\ \\_\ \_ \_\ \_/\  __//\ \/\ \/\ \L\ \/\  __/\ \ \/
+   \ \_\ \_\ \____//\____\/\____\ \____\ \_\ \_\ \___,_\ \____\\ \_\
+    \/_/\/_/\/___/ \/____/\/____/\/____/\/_/\/_/\/__,_ /\/____/ \/_/
+
+
+
 http://alexhollender.info
 
 to the wonder
@@ -76,37 +76,17 @@ Fitvid.js
     <div id="middleContainer">
       <div id="homepage" class="active mainElement">
         <div id="homeslides" class="homeSlides" data-cycle-speed="3000" data-cycle-timeout="3600">
-          <img src="avedon/images/editorial2/editorial2_2.jpg">
-          <img src="avedon/images/figure/figure_25.jpg">
-          <img src="avedon/images/liz/Liz_23.jpg">
-          <img src="avedon/images/editorial2/editorial2_17.jpg">
-          <img src="avedon/images/artists/_Artists_14.jpg">
-          <img src="avedon/images/figure/figure_26.jpg">
-          <img src="avedon/images/portraits/portraits_24.jpg">
-          <img src="avedon/images/backstage/backstage_2.jpg">
-          <img src="avedon/images/editorial/editorial_15.jpg">
-          <img src="avedon/images/figure/figure_22.jpg">
-          <img src="avedon/images/portraits/portraits_12.jpg">
-          <img src="avedon/images/figure/figure_14.jpg">
-          <img src="avedon/images/liz/Liz_6.jpg">
-          <img src="avedon/images/portraits/portraits_30.jpg">
+          <?php printImagesFromFolder('avedon/images/home'); ?>
         </div>
       </div>
-      
+
       <?php section('portraits', 'Portraits'); ?>
-        
       <?php section('figure', 'Figure'); ?>
-      
       <?php section('liz', 'Elizabeth'); ?>
-      
       <?php section('backstage', 'Backstage'); ?>
-      
       <?php section('editorial2', 'Editorial II'); ?>
-      
       <?php section('editorial', 'Editorial I'); ?>
-      
       <?php section('artists', 'Artists'); ?>
-      
       <!-- RVCA -->
       <!--<div id="rvca" class="mainElement">
         <div class="slidecontrols">
@@ -119,7 +99,7 @@ Fitvid.js
           <iframe src="http://player.vimeo.com/video/17935951?title=0&amp;byline=0&amp;portrait=0&amp;color=999999&amp" width="795" height="447" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
       </div>-->
-      
+
       <!--<?php section('misc', 'Miscellaneous'); ?>-->
     </div>
   </div>
@@ -137,22 +117,22 @@ Fitvid.js
     <p class="album liz">Elizabeth</p>
     <p class="album editorial2">Editorial I</p>
     <p class="album figure">Figure</p>
-    
+
     <p class="lCol desktop"></p>
     <p class="album portraits">Portraits</p>
     <p class="album editorial">Editorial II</p>
     <p class="album artists">Artists</p>
-    
+
     <p class="lCol desktop"></p>
     <p class="album backstage">Backstage</p>
     <p style="cursor:default;"></p>
     <p class="desktop" style="cursor:default;"></p>
-    
+
     <p class="mobile" style="cursor:default;"></p>
     <p class="lCol bRow header desktop">Info</p>
     <p class="contactLink bRow desktop">Contact</p>
     <p class="bioLink bRow desktop">Biography</p>
- 
+
     <p class="mobile" style="cursor:default;"></p>
     <p class="contactLink mobile">Contact</p>
     <p class="bioLink mobile">Biography</p>
@@ -160,14 +140,14 @@ Fitvid.js
 </div>
 
 <div id="bioContainer">
-  <p class="infoText">Michael Avedon, a graduate of the International Center of 
-  Photography, has begun to develop his photographic 
-  perspective over the past four years in New York City. 
-  Working primarily with black &amp; white 35mm and medium 
-  format film, his portfolio thus far depicts portraits of 
-  artists, creators, politicians, and relatives. A determination 
-  to expound his visual understanding of everything from 
-  performance to the natural world has allowed him to 
+  <p class="infoText">Michael Avedon, a graduate of the International Center of
+  Photography, has begun to develop his photographic
+  perspective over the past four years in New York City.
+  Working primarily with black &amp; white 35mm and medium
+  format film, his portfolio thus far depicts portraits of
+  artists, creators, politicians, and relatives. A determination
+  to expound his visual understanding of everything from
+  performance to the natural world has allowed him to
   move forward with an exploratory approach,
   informed by the photographic legacy of his grandfather
   Richard Avedon.
