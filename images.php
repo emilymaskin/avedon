@@ -1,11 +1,22 @@
 <?php
   function printImagesFromFolder($path) {
+
     $di = new RecursiveDirectoryIterator($path);
+    $file_array = array();
+
     foreach (new RecursiveIteratorIterator($di) as $filename => $file) {
       if ($di == '.' || $di == '..') {
         continue;
       }
-      echo "<img data-cycle-title='" . $di . "' src='" . $filename . "' alt=''>";
+      $file_array[$filename] = $file;
+    }
+    ksort($file_array);
+    foreach ($file_array as $f => $img) {
+      $title = ltrim(basename($f), ' 0123456789_');
+      $title = str_replace('__', '<br>', $title);
+      $title = str_replace('_', ' ', $title);
+      $title = str_replace('.jpg', '', $title);
+      echo "<img data-cycle-title='" . $title . "' src='" . $img . "' alt=''>";
     }
   }
 
