@@ -20,6 +20,15 @@
   ga('send', 'pageview');
 
 </script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script type="text/javascript" src='avedon/js/jquery.cycle2.min.js'></script>
+<script type="text/javascript" src='avedon/js/jquery.cycle2.swipe.min.js'></script>
+<script type="text/javascript" src='avedon/js/mousetrap.min.js'></script>
+<script type="text/javascript" src='avedon/js/swipe.js'></script>
+<script type="text/javascript" src='avedon/js/jquery.touchSwipe.min.js'></script>
+<script type="text/javascript" src='avedon/js/jquery.fitvids.js'></script>
+<script type="text/javascript" src='avedon/js/main.js'></script>
 <?php include('images.php'); ?>
 
 <!--
@@ -79,28 +88,7 @@ Fitvid.js
           <?php printImagesFromFolder('avedon/images/home'); ?>
         </div>
       </div>
-
-      <?php section('portraits', 'Portraits'); ?>
-      <?php section('figure', 'Figure'); ?>
-      <?php section('liz', 'Elizabeth'); ?>
-      <?php section('backstage', 'Backstage'); ?>
-      <?php section('editorial2', 'Editorial II'); ?>
-      <?php section('editorial', 'Editorial I'); ?>
-      <?php section('artists', 'Artists'); ?>
-      <!-- RVCA -->
-      <!--<div id="rvca" class="mainElement">
-        <div class="slidecontrols">
-          <div class="captions">
-            <p class="">North Shore of Oahu <br> 2010</p>
-            <p class="albumtitle"><span class="italic">RVCA Video</span></p>
-          </div>
-        </div>
-        <div id="rvcaVideo" class="allSlides">
-          <iframe src="http://player.vimeo.com/video/17935951?title=0&amp;byline=0&amp;portrait=0&amp;color=999999&amp" width="795" height="447" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-      </div>-->
-
-      <!--<?php section('misc', 'Miscellaneous'); ?>-->
+      <?php getAllImages('avedon/images/sections'); ?>
     </div>
   </div>
   <div id="bottom">
@@ -114,17 +102,7 @@ Fitvid.js
   <p class="mobile divider"></p>
   <div id="menucontainer">
     <p class="lCol header desktop">Work</p>
-    <p class="album liz">Elizabeth</p>
-    <p class="album editorial2">Editorial I</p>
-    <p class="album figure">Figure</p>
-
-    <p class="lCol desktop"></p>
-    <p class="album portraits">Portraits</p>
-    <p class="album editorial">Editorial II</p>
-    <p class="album artists">Artists</p>
-
-    <p class="lCol desktop"></p>
-    <p class="album backstage">Backstage</p>
+    <?php populateMenu(); ?>
     <p style="cursor:default;"></p>
     <p class="desktop" style="cursor:default;"></p>
 
@@ -161,16 +139,5 @@ Fitvid.js
   </div>
   <div id="closeContact"><span>close</span></div>
 </div>
-
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-<script type="text/javascript" src='avedon/js/jquery.cycle2.min.js'></script>
-<script type="text/javascript" src='avedon/js/jquery.cycle2.swipe.min.js'></script>
-<script type="text/javascript" src='avedon/js/mousetrap.min.js'></script>
-<script type="text/javascript" src='avedon/js/swipe.js'></script>
-<script type="text/javascript" src='avedon/js/jquery.touchSwipe.min.js'></script>
-<script type="text/javascript" src='avedon/js/jquery.fitvids.js'></script>
-<script type="text/javascript" src='avedon/js/main.js'></script>
-
 </body>
 </html>
