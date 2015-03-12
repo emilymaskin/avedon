@@ -54,16 +54,16 @@
   }
 
   function section($category, $title, $folder) {
-    try {
-      echo "<div id=\"$category\" class='mainElement category'>
+    try { ?>
+      <div id="<?php echo $category;?>" class='mainElement category'>
         <div id='cursorControls'>
         <p id='left' class='prev'></p>
         <p id='right' class='next'></p>
         </div>
         <div class='slidecontrols'>
         <div class='captions'>
-        <p class=\"custom-caption-$category\"></p>
-        <p class='albumtitle'><span class='italic'>$title</span></p>
+        <p class="custom-caption-<?php echo $category;?>"></p>
+        <p class='albumtitle'><span class='italic'><?php echo $title;?></span></p>
         <div class='PrevNext'>
         <p class='prev prevButton'>Prev /</p>
         <p class='next nextButton'>&nbsp;Next</p>
@@ -71,12 +71,15 @@
         <p class='instructions'>&hArr; use arrow keys to navigate</p>
         </div>
         </div>
-        <div class=\"{$category}Slides allSlides\" data-cycle-speed='1200' data-cycle-timeout='0'
-        data-cycle-manual-fx='scrollHorz' data-cycle-easing='easeInOutSine' data-cycle-swipe='true'
-        data-cycle-prev='.prev' data-cycle-next='.next' data-cycle-caption=\".custom-caption-{$category}\"";
-          printImagesFromFolder('avedon/images/sections/' . $folder);
-        echo "</div></div>";
-      } catch (UnexpectedValueException $e) {
+        <div class="<?php echo $category;?>Slides allSlides" data-cycle-speed='1200'
+          data-cycle-timeout='0' data-cycle-manual-fx='scrollHorz'
+          data-cycle-easing='easeInOutSine' data-cycle-swipe='true'
+          data-cycle-prev='.prev' data-cycle-next='.next'
+          data-cycle-caption=".custom-caption-<?php echo $category;?>"
+          data-cycle-caption-template="{{slideNum}} / {{slideCount}} <br> <br> {{cycleTitle}}" style="position: relative;">
+        <?php printImagesFromFolder('avedon/images/sections/' . $folder); ?>
+        </div></div>
+      <?php } catch (UnexpectedValueException $e) {
         return;
       }
   }
