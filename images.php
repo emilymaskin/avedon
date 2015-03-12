@@ -1,7 +1,7 @@
 <?php
 
   function getAllCategories() {
-    $categories = [];
+    $categories = array();
     foreach (scandir('avedon/images/sections') as $i => $folder) {
       if ($folder == '.' || $folder == '..' || $folder == '.DS_Store') {
         continue;
