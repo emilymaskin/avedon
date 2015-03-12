@@ -22,8 +22,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -192,7 +192,7 @@ html, body {
 }
 
 #homeslides img {
-	width:100%;	
+	width:100%;
 }
 
 div.category {
@@ -221,7 +221,7 @@ div.category {
 	height:60px;
 }
 
-.albumtitle { 
+.albumtitle {
 	margin-top: 20px;
 }
 
@@ -242,7 +242,7 @@ div.category {
     transition: all 500ms ease;
 }
 
-.prevButton { 
+.prevButton {
 	float:left;
 	color: black;
 	opacity: 0.5;
@@ -281,7 +281,7 @@ p.instructions:hover {
     -o-transition: all 500ms ease;
     -ms-transition: all 500ms ease;
     transition: all 500ms ease;
-}	
+}
 
 div.allSlides {
 	width:100%;
@@ -364,6 +364,9 @@ div.allSlides img {
 	margin-top:44px;
 	cursor:pointer;
 }
+#menucontainer .section {
+  clear: both;
+}
 
 #menu p {
 	height:43px;
@@ -410,7 +413,7 @@ div.allSlides img {
 	height: 1px;
 	border-bottom: 1px solid #dddddd;
 	position: absolute;
-	bottom: 87px;
+	bottom: 100px;
 	left: 3%;
 }
 

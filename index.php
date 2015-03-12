@@ -101,19 +101,18 @@ Fitvid.js
 <div id="menu">
   <p class="mobile divider"></p>
   <div id="menucontainer">
-    <p class="lCol header desktop">Work</p>
-    <?php populateMenu(); ?>
-    <p style="cursor:default;"></p>
-    <p class="desktop" style="cursor:default;"></p>
+    <div class="section">
+      <p class="lCol header desktop">Work</p>
+      <?php populateMenu(); ?>
+    </div>
+    <div class="section">
+      <p class="lCol bRow header desktop">Info</p>
+      <p class="contactLink bRow desktop">Contact</p>
+      <p class="bioLink bRow desktop">Biography</p>
 
-    <p class="mobile" style="cursor:default;"></p>
-    <p class="lCol bRow header desktop">Info</p>
-    <p class="contactLink bRow desktop">Contact</p>
-    <p class="bioLink bRow desktop">Biography</p>
-
-    <p class="mobile" style="cursor:default;"></p>
-    <p class="contactLink mobile">Contact</p>
-    <p class="bioLink mobile">Biography</p>
+      <p class="contactLink mobile">Contact</p>
+      <p class="bioLink mobile">Biography</p>
+    </div>
   </div>
 </div>
 
