@@ -35,16 +35,23 @@
       $file_array[$filename] = $file;
     }
     krsort($file_array);
+    $i = 0;
     foreach ($file_array as $f => $img) {
       $title = ltrim(basename($f), ' 0123456789_');
       $title = str_replace('__', '<br>', $title);
       $title = str_replace('_', ' ', $title);
       $title = str_replace('.jpg', '', $title);
-      echo "<img data-cycle-title='" . $title . "' src='" . $img . "' alt=''>";
+      if ($i == 0) {
+        echo "<img data-cycle-title='" . $title . "' src='" . $img . "' alt='' class='first'>";
+      }
+      else {
+        echo "<img data-cycle-title='" . $title . "' src='" . $img . "' alt=''>";
+      }
+      $i++;
     }
   }
 
-  function getAllImages($path) {
+  function printAllImages($path) {
     $categories = getAllCategories($path);
     foreach ($categories as $c) {
       $slug = strtolower($c);
