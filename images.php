@@ -64,8 +64,8 @@
     try { ?>
       <div id="<?php echo $category;?>" class='mainElement category'>
         <div id='cursorControls'>
-        <p id='left' class='prev'></p>
-        <p id='right' class='next'></p>
+          <div id='left' class='prev'></div>
+          <div id='right' class='next'></div>
         </div>
         <div class='slidecontrols'>
         <div class='captions'>

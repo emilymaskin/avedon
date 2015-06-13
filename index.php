@@ -72,14 +72,12 @@ Fitvid.js
 <div id="intro">
   <div id="introTitle">
     <p><span>MICHAEL</span> AVEDON</p>
-    <div>ENTER</div>
+    <div class="enter">ENTER</div>
   </div>
 </div>
 <div id="siteContainer">
   <div id="top">
-    <div>
-      <p><span>MICHAEL</span> AVEDON</p>
-    </div>
+    <p><span>MICHAEL</span> AVEDON</p>
   </div>
   <div id="middle">
     <div id="middleContainer">
