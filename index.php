@@ -69,11 +69,9 @@ Fitvid.js
 
 <body>
 <div id="screen"></div>
-<div id="intro">
-  <div id="introTitle">
-    <p><span>MICHAEL</span> AVEDON</p>
-    <div class="enter">ENTER</div>
-  </div>
+<div id="introTitle">
+  <p><span>MICHAEL</span> AVEDON</p>
+  <div class="enter">ENTER</div>
 </div>
 <div id="siteContainer">
   <div id="top">

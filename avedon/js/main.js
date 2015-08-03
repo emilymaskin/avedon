@@ -1,14 +1,12 @@
 /* global Mousetrap */
-$(document).ready(function() {
+(function() {
   'use strict';
 
-  var $siteContainer = $('#siteContainer');
-  var $screen = $('#screen');
-  var $introTitle = $('#introTitle');
-  var $bioContainer = $('#bioContainer');
-  var $contactCont = $('#contactCont');
+  var $menu;
+  var $homeSlides;
+  var $categorySlides;
 
-  var Slides = function(selector) {
+  var Slideshow = function(selector) {
     var _this = this;
 
     this.$el = $(selector);
@@ -22,7 +20,7 @@ $(document).ready(function() {
       Mousetrap.bind('left', function() {
         _this.$el.cycle('prev');
       });
-    }
+    };
     this.activate = function() {
       this.$el.parent().addClass('active');
     };
@@ -43,33 +41,71 @@ $(document).ready(function() {
     this.find = function(s) {
       return this.$el.find(s);
     };
-    this.cycle();
+    this.setEvents();
   };
 
-  var Menu = function() {
+  var Menu = function(selector) {
     var _this = this;
 
-    this.$el = $('#menu');
+    this.$el = $(selector);
     this.$menuContainer = $('#menucontainer');
     this.menuToggle = new MenuToggle(this);
+    this.$screen = $('#screen');
+
+    $('#closeBio').click(function() {
+      $('#bioContainer').hide();
+      $('#siteContainer').fadeIn(900);
+      if (typeof $categorySlides === 'undefined') {
+        $homeSlides.resume();
+      }
+    });
+
+    $('#closeContact').click(function() {
+      $('#contactCont').hide();
+      $('#siteContainer').fadeIn(900);
+      if (typeof $categorySlides === 'undefined') {
+        $homeSlides.resume();
+      }
+    });
+
+    this.changeCategory = function(category) {
+      var $activeCategory = $('.active');
+      var $categoryEl = $('#' + category);
+
+      $categorySlides = new Slideshow('.' + category + 'Slides');
+      $categorySlides.cycle();
+
+      $categorySlides.setEvents();
+      $homeSlides.pause();
+      $categorySlides.restart();
+      $activeCategory.fadeOut(1000, function() {
+        $categoryEl.fadeIn(1200, function() {
+          $activeCategory.parent().removeClass('active');
+          $categorySlides.activate();
+          _this.$menuContainer.find('p.album').removeClass('selected');
+          $(this).addClass('selected');
+          $categorySlides.find('img.first').removeClass('first');
+        });
+      });
+    };
+
     this.showMenu = function() {
       this.$el.slideDown(400);
-      $screen.fadeIn('slow');
+      this.$screen.fadeIn('slow');
     };
     this.hideMenu = function() {
       this.$el.slideUp(400);
-      $screen.fadeOut('slow');
+      this.$screen.fadeOut('slow');
     };
     this.setEvents = function () {
       this.$el.mouseleave(function() {
         _this.hideMenu();
         _this.menuToggle.showToggle();
       });
-      $screen.click(function() {
+      this.$screen.click(function() {
         _this.hideMenu();
         _this.menuToggle.showToggle();
       });
-      // Menu container hide on click
       Mousetrap.bind('up', function() {
         _this.hideMenu();
         _this.menuToggle.showToggle();
@@ -81,48 +117,32 @@ $(document).ready(function() {
 
       this.$menuContainer.find('p').click(function() {
         var $this = $(this);
-        var $activeCategory = $('.active');
-        var category = $this.data('category');
-        var $categoryEl = $('#' + category);
-        var $categorySlides = new Slides('.' + category + 'Slides');
 
-        $categorySlides.setEvents();
         _this.hideMenu();
-        $homeSlides.pause();
-        $categorySlides.restart();
-        $activeCategory.fadeOut(1000, function() {
-          $categoryEl.fadeIn(1200, function() {
-            $activeCategory.parent().removeClass('active');
-            $categorySlides.activate();
-            _this.$menuContainer.find('p.album').removeClass('selected');
-            $this.addClass('selected');
-            $categorySlides.find('img.first').removeClass('first');
-          });
-        });
-        if ($this.hasClass('contactLink')) {
-          $contactCont.animate({
+        if ($this.hasClass('album')) {
+          _this.changeCategory($(this).data('category'));
+        } else {
+          if ($this.hasClass('contactLink')) {
+            this.$container = $('#contactCont');
+          } else if ($this.hasClass('bioLink')) {
+            this.$container = $('#bioContainer');
+          }
+
+          this.$container.animate({
             opacity: 1
           }, 900, function() {
             $(this).show();
           });
-          $bioContainer.css('opacity', 0);
-          $siteContainer.fadeOut(900);
-          $homeSlides.pause();
-        } else if ($this.hasClass('bioLink')) {
-          $bioContainer.animate({
-            opacity: 1
-          }, 900, function() {
-            $(this).show();
-          });
-          $contactCont.css('opacity', 0);
-          $siteContainer.fadeOut(900);
+          this.$container.css('opacity', 0);
+          $('#siteContainer').fadeOut(900);
           $homeSlides.pause();
         }
       });
-    }
+    };
+    this.setEvents();
   };
 
-  var MenuToggle = function(menu) {
+  var MenuToggle = function() {
     var _this = this;
 
     this.$el = $('#bottom');
@@ -133,43 +153,32 @@ $(document).ready(function() {
       _this.$el.fadeIn('fast');
     };
     this.$el.find('div p').click(function() {
-      menu.showMenu();
+      $menu.showMenu();
       _this.hideToggle();
     });
   };
 
-  var $menu = new Menu();
-  $menu.setEvents();
+  var setupIntro = function() {
+    var $introTitle = $('#introTitle');
+    var $enterLink = $introTitle.find('.enter');
 
-  var $homeSlides = new Slides('.homeSlides');
-  $homeSlides.setEvents();
+    $introTitle.fadeIn(1400, 'easeInQuint', function() {
+      $enterLink.addClass('show', 500);
+    });
 
-  // Fade intro screen in
-  $introTitle.fadeIn(1400, 'easeInQuint', function() {
-    $introTitle.find('div').addClass('show', 500);
-  });
-
-  // Fade intro screen out
-  $introTitle.find('div').click(function() {
-    $introTitle.fadeOut(1200, function() {
-      $homeSlides.cycle();
-      $siteContainer.fadeIn(1800, function() {
-        $('#intro').hide();
+    $enterLink.click(function() {
+      $introTitle.fadeOut(1200, function() {
+        $homeSlides.cycle();
+        $('#siteContainer').fadeIn(1800, function() {
+          $introTitle.hide();
+          $menu = new Menu('#menu');
+        });
       });
     });
-  });
+  };
 
-  // Hide contact
-  $('#closeContact').click(function() {
-    $contactCont.hide();
-    $siteContainer.fadeIn(900);
-    $homeSlides.resume();
+  $(document).ready(function() {
+    $homeSlides = new Slideshow('.homeSlides');
+    setupIntro();
   });
-
-  // Hide bio
-  $('#closeBio').click(function() {
-    $bioContainer.hide();
-    $siteContainer.fadeIn(900);
-    $homeSlides.resume();
-  });
-});
+}());
