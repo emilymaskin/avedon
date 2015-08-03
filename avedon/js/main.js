@@ -52,22 +52,6 @@
     this.menuToggle = new MenuToggle(this);
     this.$screen = $('#screen');
 
-    $('#closeBio').click(function() {
-      $('#bioContainer').hide();
-      $('#siteContainer').fadeIn(900);
-      if (typeof $categorySlides === 'undefined') {
-        $homeSlides.resume();
-      }
-    });
-
-    $('#closeContact').click(function() {
-      $('#contactCont').hide();
-      $('#siteContainer').fadeIn(900);
-      if (typeof $categorySlides === 'undefined') {
-        $homeSlides.resume();
-      }
-    });
-
     this.changeCategory = function(category) {
       var $activeCategory = $('.active');
       var $categoryEl = $('#' + category);
@@ -83,9 +67,15 @@
           $activeCategory.parent().removeClass('active');
           $categorySlides.activate();
           _this.$menuContainer.find('p.album').removeClass('selected');
-          $(this).addClass('selected');
+          _this.$menuContainer.find('p.' + category).addClass('selected');
           $categorySlides.find('img.first').removeClass('first');
         });
+      });
+    };
+
+    this.showSplashScreen = function(infoType) {
+      $('#siteContainer').fadeOut(900, function() {
+        $('.splash-container.' + infoType).fadeIn(900);
       });
     };
 
@@ -122,20 +112,15 @@
         if ($this.hasClass('album')) {
           _this.changeCategory($(this).data('category'));
         } else {
-          if ($this.hasClass('contactLink')) {
-            this.$container = $('#contactCont');
-          } else if ($this.hasClass('bioLink')) {
-            this.$container = $('#bioContainer');
-          }
-
-          this.$container.animate({
-            opacity: 1
-          }, 900, function() {
-            $(this).show();
-          });
-          this.$container.css('opacity', 0);
-          $('#siteContainer').fadeOut(900);
           $homeSlides.pause();
+          _this.showSplashScreen($this.data('type'));
+        }
+      });
+      $('.close-toggle').click(function() {
+        $('.splash-container').hide();
+        $('#siteContainer').fadeIn(900);
+        if (typeof $categorySlides === 'undefined') {
+          $homeSlides.resume();
         }
       });
     };

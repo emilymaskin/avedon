@@ -412,7 +412,7 @@ div.allSlides img {
 	left: 3%;
 }
 
-#bioContainer, #contactCont {
+.splash-container {
 	width:100%;
 	height:100%;
 	position:absolute;
@@ -422,12 +422,7 @@ div.allSlides img {
   right: 0;
 	background:#CCC;
 	z-index:110;
-  opacity: 0;
   display: none;
-}
-
-#bioContainer {
-  min-height:875px;
 }
 
 #contactBox {
@@ -442,7 +437,7 @@ div.allSlides img {
 	right: 0;
 }
 
-#bioContainer p.infoText {
+.splash-container.bio p.infoText {
 	text-align:left;
 }
 
@@ -482,7 +477,7 @@ p.infoText a:hover {
     transition: all 600ms ease;
 }
 
-#closeBio, #closeContact {
+.close-toggle {
 	width: 100%;
 	height: 61px;
 	color: #666;
@@ -506,7 +501,7 @@ p.infoText a:hover {
 	border-bottom: 1px solid #c5c5c5;
 }
 
-#closeBio span, #closeContact span {
+.close-toggle span {
 	-webkit-transition: all 700ms ease;
     -moz-transition: all 700ms ease;
     -o-transition: all 700ms ease;
@@ -514,7 +509,7 @@ p.infoText a:hover {
     transition: all 700ms ease;
 }
 
-#closeBio span:hover, #closeContact span:hover {
+.close-toggle span:hover {
 	opacity:0.7;
 	-webkit-transition: all 700ms ease;
     -moz-transition: all 700ms ease;
@@ -642,11 +637,11 @@ p.infoText a:hover {
 
 /*Bio Page*/
 @media (min-width:640px) {
-  #bioContainer, #contactCont {
+  .splash-container {
   	min-height: 533px;
   }
 
-  #bioContainer p {
+  .splash-container.bio p {
   	width: 540px;
   	height: 400px;
   	margin: auto;
@@ -664,7 +659,7 @@ p.infoText a:hover {
   }
 
 
-  #closeBio, #closeContact {
+  .close-toggle {
   	width:50px;
   	height:20px;
   	color:#666;
@@ -684,11 +679,11 @@ p.infoText a:hover {
   	border-bottom:1px solid #666666;
   }
 
-  #closeBio:hover {
+  .splash-container.bio .close-toggle:hover {
   	opacity:0.7;
   }
 
-  #closeBio span:hover {
+  .splash-container.bio .close-toggle span:hover {
   	opacity:1;
   }
 

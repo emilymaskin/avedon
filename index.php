@@ -103,16 +103,16 @@ Fitvid.js
     </div>
     <div class="section">
       <p class="lCol bRow header desktop">Info</p>
-      <p class="contactLink bRow desktop">Contact</p>
-      <p class="bioLink bRow desktop">Biography</p>
+      <p class="bRow desktop splash-toggle" data-type="contact">Contact</p>
+      <p class="bRow desktop splash-toggle" data-type="bio">Biography</p>
 
-      <p class="contactLink mobile">Contact</p>
-      <p class="bioLink mobile">Biography</p>
+      <p class="splash-toggle mobile" data-type="contact">Contact</p>
+      <p class="splash-toggle mobile" data-type="bio">Biography</p>
     </div>
   </div>
 </div>
 
-<div id="bioContainer">
+<div class="splash-container bio">
   <p class="infoText">Michael Avedon, a graduate of the International Center of
   Photography, has begun to develop his photographic
   perspective over the past four years in New York City.
@@ -125,14 +125,14 @@ Fitvid.js
   informed by the photographic legacy of his grandfather
   Richard Avedon.
   </p>
-  <div id="closeBio"><span>close</span></div>
+  <div class="close-toggle"><span>close</span></div>
 </div>
 
-<div id="contactCont">
+<div class="splash-container contact">
   <div id="contactBox">
     <p class="infoText"><a href="mailto:info@michaelavedon.com">info@michaelavedon.com</a></p>
   </div>
-  <div id="closeContact"><span>close</span></div>
+  <div class="close-toggle"><span>close</span></div>
 </div>
 </body>
 </html>
