@@ -86,7 +86,7 @@ html, body {
     transition: all 600ms ease;
 }
 
-#introTitle .enter: hover {
+#introTitle .enter:hover {
 	color: #666666;
 	cursor: pointer;
 	-webkit-transition: all 500ms ease;
@@ -247,7 +247,7 @@ div.category {
     transition: all 500ms ease;
 }
 
-.nextButton: hover, .prevButton: hover {
+.nextButton:hover, .prevButton:hover {
 	opacity: 0.9;
 	-webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
@@ -267,7 +267,7 @@ p.instructions {
     transition: all 500ms ease;
 }
 
-p.instructions: hover {
+p.instructions:hover {
 	opacity: 1;
 	-webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
@@ -329,7 +329,7 @@ div.allSlides img {
     transition: all 500ms ease;
 }
 
-#bottom div p: hover {
+#bottom div p:hover {
 	opacity: 0.7;
     -webkit-transition: all 1100ms ease;
     -moz-transition: all 1100ms ease;
@@ -378,7 +378,7 @@ div.allSlides img {
     transition: all 500ms ease;
 }
 
-#menu p: hover {
+#menu p:hover {
 	color: #4f4f4f;
     -webkit-transition: all 1100ms ease;
     -moz-transition: all 1100ms ease;
@@ -466,7 +466,7 @@ p.infoText a {
     transition: all 600ms ease;
 }
 
-p.infoText a: hover {
+p.infoText a:hover {
 	opacity: 0.5;
 	-webkit-transition: all 600ms ease;
     -moz-transition: all 600ms ease;
@@ -507,7 +507,7 @@ p.infoText a: hover {
     transition: all 700ms ease;
 }
 
-.close-toggle span: hover {
+.close-toggle span:hover {
 	opacity: 0.7;
 	-webkit-transition: all 700ms ease;
     -moz-transition: all 700ms ease;
@@ -677,11 +677,11 @@ p.infoText a: hover {
   	border-bottom: 1px solid #666;
   }
 
-  .splash-container.bio .close-toggle: hover {
+  .splash-container.bio .close-toggle:hover {
   	opacity: 0.7;
   }
 
-  .splash-container.bio .close-toggle span: hover {
+  .splash-container.bio .close-toggle span:hover {
   	opacity: 1;
   }
 
