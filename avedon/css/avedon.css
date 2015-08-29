@@ -122,17 +122,13 @@ html, body {
 	width:100%;
 	height:20%;
 	min-height:70px;
-	display:table;
+	display: table;
 	-webkit-transition: all 700ms ease;
     -moz-transition: all 700ms ease;
     -o-transition: all 700ms ease;
     -ms-transition: all 700ms ease;
     transition: all 700ms ease;
-}
-
-#top {
 	margin: 0 auto;
-	display: table-cell;
 	vertical-align: middle;
   font-family: NovecentoMed;
   letter-spacing: 1.4pt;
@@ -143,6 +139,8 @@ html, body {
 	width: 177px;
 	margin: 24px auto 16px auto;
 	cursor: default;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 #top p span {
