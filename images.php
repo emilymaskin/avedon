@@ -78,12 +78,14 @@
         <p class='instructions'>&hArr; use arrow keys to navigate</p>
         </div>
         </div>
-        <div class="<?php echo $category;?>Slides allSlides" data-cycle-speed='1200'
+        <div class="<?php echo $category;?>Slides allSlides"
+          data-cycle-speed='1200' data-cycle-log='false' 
           data-cycle-timeout='0' data-cycle-manual-fx='scrollHorz'
           data-cycle-easing='easeInOutSine' data-cycle-swipe='true'
           data-cycle-prev='.prev' data-cycle-next='.next'
           data-cycle-caption=".custom-caption-<?php echo $category;?>"
-          data-cycle-caption-template="{{slideNum}} / {{slideCount}} <br> <br> {{cycleTitle}}" style="position: relative;">
+          data-cycle-caption-template="{{slideNum}} / {{slideCount}} <br> <br> {{cycleTitle}}"
+          style="position: relative;">
         <?php printImagesFromFolder('avedon/images/sections/' . $folder); ?>
         </div></div>
       <?php } catch (UnexpectedValueException $e) {

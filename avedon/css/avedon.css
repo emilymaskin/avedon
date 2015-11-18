@@ -4,13 +4,13 @@
 @font-face {
     font-family: NovecentoMed;
     src: url('Novecentowide-Medium.otf');
-    font-weight: normal;
+    font-weight:normal;
 }
 
 @font-face {
     font-family: NovecentoNormal;
     src: url('Novecentowide-Normal.otf');
-    font-weight: normal;
+    font-weight:normal;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -34,51 +34,56 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-*:: selection { background: #eee; }
-*:: -moz-selection { background: #eee; }
+*::selection { background:#eee; }
+*::-moz-selection { background:#eee; }
 
 html, body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	text-align: center;
-	cursor: default;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	border:0;
+	text-align:center;
+	cursor:default;
+}
+
+#intro {
+	width:100%;
+	height:100%;
 }
 
 #introTitle {
-	width: 204px;
-	height: 80px;
+	width:204px;
+	height:80px;
 	margin: auto;
 	position: absolute;
  	top: 0; left: 0; bottom: 0; right: 0;
-	display: none;
+	display:none;
 }
 
 #introTitle p {
-	font-family: NovecentoMed;
-	font-size: 14pt;
-	letter-spacing: 1.5pt;
-	cursor: default;
+	font-family:NovecentoMed;
+	font-size:14pt;
+	letter-spacing:1.5pt;
+	cursor:default;
 }
 
 #introTitle p span {
-	color: #939597;
+	color:#939597;
 }
 
 #introTitle .enter {
-	font-family: NovecentoNormal;
-	font-size: 8pt;
-	letter-spacing: 1pt;
-	color: #c4c4c4;
-	margin-top: 20px;
-	opacity: 0;
+	font-family:NovecentoNormal;
+	font-size:8pt;
+	letter-spacing:1pt;
+	color:#C4C4C4;
+	margin-top:20px;
+	opacity:0;
 }
 
 #introTitle .enter.show {
-	opacity: 1;
-	margin-top: 30px;
+	opacity:1;
+	margin-top:30px;
 	-webkit-transition: all 600ms ease;
     -moz-transition: all 600ms ease;
     -o-transition: all 600ms ease;
@@ -87,8 +92,8 @@ html, body {
 }
 
 #introTitle .enter:hover {
-	color: #666666;
-	cursor: pointer;
+	color:#666666;
+	cursor:pointer;
 	-webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -o-transition: all 500ms ease;
@@ -97,32 +102,31 @@ html, body {
 }
 
 #siteContainer {
-	width: 100%;
-	height: 100%;
-	max-height: 875px;
+	width:100%;
+	height:100%;
+	max-height:875px;
 	margin: auto;
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
-	display: none;
+	display:none;
 }
 
 #screen {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: black;
-	opacity: 0.5;
-	z-index: 112;
-	display: none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:black;
+	opacity:0.5;
+	z-index:112;
+	display:none;
 }
 
 #top {
-	width: 100%;
-	height: 20%;
-	min-height: 70px;
-	display: table;
+	width:100%;
+	height:20%;
+	min-height:70px;
 	-webkit-transition: all 700ms ease;
     -moz-transition: all 700ms ease;
     -o-transition: all 700ms ease;
@@ -139,21 +143,19 @@ html, body {
 	width: 177px;
 	margin: 24px auto 16px auto;
 	cursor: default;
-  display: table-cell;
-  vertical-align: middle;
 }
 
 #top p span {
-	color: #939597;
+	color:#939597;
 }
 
 #middle {
-	width: 100%;
-	max-width: 1150px;
-	height: 60%;
-	display: table;
-	position: relative;
-	margin: 0 auto;
+	width:100%;
+	max-width:1150px;
+	height:60%;
+	display:table;
+	position:relative;
+	margin:0 auto;
 	-webkit-transition: all 700ms ease;
     -moz-transition: all 700ms ease;
     -o-transition: all 700ms ease;
@@ -162,21 +164,21 @@ html, body {
 }
 
 #middleContainer {
-	width: 100%;
-	min-height: 600px;
-	margin: 0 auto;
-	display: table-cell;
-	vertical-align: middle;
+	width:100%;
+	min-height:600px;
+	margin:0 auto;
+	display:table-cell;
+	vertical-align:middle;
 }
 
 #cursorControls {
-	display: none;
+	display:none;
 }
 
 #homeslides {
-	width: 100%;
-	height: auto;
-	margin: 0 auto;
+	width:100%;
+	height:auto;
+	margin:0 auto;
 	-webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -o-transition: all 500ms ease;
@@ -185,33 +187,33 @@ html, body {
 }
 
 #homeslides img {
-	width: 100%;
+	width:100%;
 }
 
 div.category {
-	display: none;
+	display:none;
 }
 
 .slidecontrols {
-	display: none;
+	display:none;
 }
 
 .captions {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 10px;
-	color: #a7a9ab;
+	color:#A7A9AB;
 	text-align: left;
 	width: 100px;
-	margin-left: 30px;
-	float: left;
+	margin-left:30px;
+	float:left;
 }
 
 .captions span.italic {
-	font-style: italic;
+	font-style:italic;
 }
 
 .custom-caption {
-	height: 60px;
+	height:60px;
 }
 
 .albumtitle {
@@ -220,11 +222,11 @@ div.category {
 
 .PrevNext {
 	height: 15px;
-	margin-top: 45px;
+	margin-top:45px;
 }
 
 .nextButton {
-	float: left;
+	float:left;
 	color: black;
 	opacity: 0.5;
 	cursor: pointer;
@@ -236,7 +238,7 @@ div.category {
 }
 
 .prevButton {
-	float: left;
+	float:left;
 	color: black;
 	opacity: 0.5;
 	cursor: pointer;
@@ -248,7 +250,7 @@ div.category {
 }
 
 .nextButton:hover, .prevButton:hover {
-	opacity: 0.9;
+	opacity:0.9;
 	-webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -o-transition: all 500ms ease;
@@ -257,9 +259,9 @@ div.category {
 }
 
 p.instructions {
-	font-size: 9px;
-	margin-top: 35px;
-	opacity: 0.6;
+	font-size:9px;
+	margin-top:35px;
+	opacity:0.6;
 	-webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -o-transition: all 500ms ease;
@@ -268,7 +270,7 @@ p.instructions {
 }
 
 p.instructions:hover {
-	opacity: 1;
+	opacity:1;
 	-webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -o-transition: all 500ms ease;
@@ -277,9 +279,9 @@ p.instructions:hover {
 }
 
 div.allSlides {
-	width: 100%;
-	height: auto;
-	margin: 0 auto;
+	width:100%;
+	height:auto;
+	margin:0 auto;
 	-webkit-transition: all 900ms ease;
     -moz-transition: all 900ms ease;
     -o-transition: all 900ms ease;
@@ -288,16 +290,16 @@ div.allSlides {
 }
 
 div.allSlides img {
-	width: 100%;
+	width:100%;
 }
 
 #bottom {
-	width: 100%;
-	height: 20%;
-	min-height: 40px;
-	display: table;
-	position: relative;
-	z-index: 110;
+	width:100%;
+	height:20%;
+	min-height:40px;
+	display:table;
+	position:relative;
+	z-index:110;
 	-webkit-transition: all 700ms ease;
     -moz-transition: all 700ms ease;
     -o-transition: all 700ms ease;
@@ -306,22 +308,22 @@ div.allSlides img {
 }
 
 #bottom div {
-	margin: 0 auto;
-	display: table-cell;
-	vertical-align: middle;
+	margin:0 auto;
+	display:table-cell;
+	vertical-align:middle;
 }
 
 #bottom div p {
-	width: 42px;
-	height: 20px;
-	margin: 0 auto;
+	width:42px;
+	height:20px;
+	margin:0 auto;
 	color: #666;
 	font-family: NovecentoMed;
 	font-size: 12px;
 	letter-spacing: 2.4px;
-	letter-spacing: 1pt;
-	padding-bottom: 4px;
-	border-bottom: 1px solid #666666;
+	letter-spacing:1pt;
+	padding-bottom:4px;
+	border-bottom:1px solid #666666;
 	-webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -o-transition: all 500ms ease;
@@ -330,47 +332,47 @@ div.allSlides img {
 }
 
 #bottom div p:hover {
-	opacity: 0.7;
+	opacity:0.7;
     -webkit-transition: all 1100ms ease;
     -moz-transition: all 1100ms ease;
     -o-transition: all 1100ms ease;
     -ms-transition: all 1100ms ease;
     transition: all 1100ms ease;
-	cursor: pointer;
+	cursor:pointer;
 }
 
 #menu {
-	width: 100%;
-	height: 300px;
-	background: #F1F1F2;
-	position: fixed;
-	bottom: 0px;
-	z-index: 115;
-	display: none;
+	width:100%;
+	height:300px;
+	background:#F1F1F2;
+	position:fixed;
+	bottom:0px;
+	z-index:115;
+	display:none;
 }
 
 #menucontainer {
-	width: 90%;
-	max-width: none;
-	height: auto;
-	margin: 0 auto;
-	margin-top: 44px;
-	cursor: pointer;
+	width:90%;
+	max-width:none;
+	height:auto;
+	margin:0 auto;
+	margin-top:44px;
+	cursor:pointer;
 }
 #menucontainer .section {
   clear: both;
 }
 
 #menu p {
-	height: 43px;
-	font-family: NovecentoNormal;
-	color: #A7A9AB;
-	font-size: 8pt;
-	width: 34%;
-	margin-left: 14%;
-	text-align: left;
-	float: left;
-	letter-spacing: 1.5pt;
+	height:43px;
+	font-family:NovecentoNormal;
+	color:#A7A9AB;
+	font-size:8pt;
+	width:34%;
+	margin-left:14%;
+	text-align:left;
+	float:left;
+	letter-spacing:1.5pt;
 	-webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     -o-transition: all 500ms ease;
@@ -379,48 +381,53 @@ div.allSlides img {
 }
 
 #menu p:hover {
-	color: #4f4f4f;
+	color:#4F4F4F;
     -webkit-transition: all 1100ms ease;
     -moz-transition: all 1100ms ease;
     -o-transition: all 1100ms ease;
     -ms-transition: all 1100ms ease;
     transition: all 1100ms ease;
-	cursor: pointer;
+	cursor:pointer;
 }
 
 #menu p.desktop {
-	display: none;
+	display:none;
 }
 
 #menu p.mobile {
-	height: 25px;
-	display: block;
+	height:25px;
+	display:block;
 }
 
 #menu p.selected {
-	color: #4f4f4f;
+	color:#4F4F4F;
 }
 
 #menu p.mobile.divider {
 	width: 70%;
 	height: 1px;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #dddddd;
 	position: absolute;
 	bottom: 100px;
 	left: 3%;
 }
 
-.splash-container {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
+#bioContainer, #contactContainer {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
   bottom: 0;
   right: 0;
-	background: #ccc;
-	z-index: 110;
+	background:#CCC;
+	z-index:110;
+  opacity: 0;
   display: none;
+}
+
+#bioContainer {
+  min-height:875px;
 }
 
 #contactBox {
@@ -435,30 +442,30 @@ div.allSlides img {
 	right: 0;
 }
 
-.splash-container.bio p.infoText {
-	text-align: left;
+#bioContainer p.infoText {
+	text-align:left;
 }
 
 p.infoText {
 	width: 80%;
 	height: auto;
 	margin: 0 auto;
-	color: white;
-	font-family: NovecentoMed;
+	color:white;
+	font-family:NovecentoMed;
 	font-size : 12px;
  	line-height : 28px;
     letter-spacing : 2.4px;
-	text-align: center;
-	margin-top: 80px;
+	text-align:center;
+	margin-top:80px;
 }
 
 div#contactBox p.infoText {
-	margin-top: 0;
+	margin-top:0;
 }
 
 p.infoText a {
-	color: white;
-	text-decoration: none;
+	color:white;
+	text-decoration:none;
 	-webkit-transition: all 600ms ease;
     -moz-transition: all 600ms ease;
     -o-transition: all 600ms ease;
@@ -467,7 +474,7 @@ p.infoText a {
 }
 
 p.infoText a:hover {
-	opacity: 0.5;
+	opacity:0.5;
 	-webkit-transition: all 600ms ease;
     -moz-transition: all 600ms ease;
     -o-transition: all 600ms ease;
@@ -475,11 +482,11 @@ p.infoText a:hover {
     transition: all 600ms ease;
 }
 
-.close-toggle {
+#closeBio, #closeContact {
 	width: 100%;
 	height: 61px;
 	color: #666;
-	background: #ccc;
+	background: #CCC;
 	font-family: NovecentoMed;
 	font-size: 10px;
 	letter-spacing: 2.4px;
@@ -499,7 +506,7 @@ p.infoText a:hover {
 	border-bottom: 1px solid #c5c5c5;
 }
 
-.close-toggle span {
+#closeBio span, #closeContact span {
 	-webkit-transition: all 700ms ease;
     -moz-transition: all 700ms ease;
     -o-transition: all 700ms ease;
@@ -507,8 +514,8 @@ p.infoText a:hover {
     transition: all 700ms ease;
 }
 
-.close-toggle span:hover {
-	opacity: 0.7;
+#closeBio span:hover, #closeContact span:hover {
+	opacity:0.7;
 	-webkit-transition: all 700ms ease;
     -moz-transition: all 700ms ease;
     -o-transition: all 700ms ease;
@@ -517,89 +524,89 @@ p.infoText a:hover {
 }
 
 /*Menu*/
-@media (min-width: 400px) {
+@media (min-width:400px) {
 	#cursorControls {
-  	display: block;
-  	width: 100%;
-  	height: 90%;
-  	min-height: 290px;
+  	display:block;
+  	width:100%;
+  	height:90%;
+  	min-height:290px;
   	position: absolute;
   	left: 0;
-  	z-index: 109;
+  	z-index:109;
   }
 
   #left {
-  	width: 50%;
-  	height: 100%;
-  	float: left;
+  	width:50%;
+  	height:100%;
+  	float:left;
   	cursor: url('cursorPrev.png'), auto;
   }
 
   #right {
-  	width: 50%;
-  	height: 100%;
-  	float: left;
+  	width:50%;
+  	height:100%;
+  	float:left;
   	cursor: url('cursorNext.png'), auto;
   }
 }
 
 /*Menu*/
-@media (min-width: 550px) {
+@media (min-width:550px) {
   #top {
-  	width: 100%;
-  	height: 13%;
-  	min-height: 70px;
-  	display: table;
+  	width:100%;
+  	height:13%;
+  	min-height:70px;
+  	display:table;
   }
 
   #middle {
-  	width: 100%;
-  	max-width: 1150px;
-  	height: 74%;
-  	display: table;
-  	position: relative;
-  	margin: 0 auto;
+  	width:100%;
+  	max-width:1150px;
+  	height:74%;
+  	display:table;
+  	position:relative;
+  	margin:0 auto;
   }
 
   #bottom {
-  	width: 100%;
-  	height: 12%;
-  	min-height: 40px;
-  	display: table;
-  	position: relative;
-  	z-index: 110;
+  	width:100%;
+  	height:12%;
+  	min-height:40px;
+  	display:table;
+  	position:relative;
+  	z-index:110;
   }
 
 
   #menu {
-  	width: 100%;
-  	height: 290px;
-  	background: #f1f1f2;
-  	position: fixed;
-  	bottom: 0px;
-  	z-index: 115;
-  	display: none;
+  	width:100%;
+  	height:290px;
+  	background:#F1F1F2;
+  	position:fixed;
+  	bottom:0px;
+  	z-index:115;
+  	display:none;
   }
 
   #menucontainer {
-  	width: 630px;
+  	width:630px;
   	height: 133px;
-  	max-width: none;
-  	margin: 0 auto;
-  	margin-top: 66px;
-  	padding-left: 12.5%;
+  	max-width:none;
+  	margin:0 auto;
+  	margin-top:66px;
+  	padding-left:12.5%;
   }
 
   #menu p {
-  	width: 20%;
-  	height: 33px;
-  	float: left;
-  	margin-left: 0;
-  	color: #a7a9ab;
-  	font-family: NovecentoNormal;
-  	font-size: 8pt;
-  	letter-spacing: 1.5pt;
-  	text-align: left;
+  	width:20%;
+  	height:33px;
+  	float:left;
+  	margin-left:0;
+  	color:#A7A9AB;
+  	font-family:NovecentoNormal;
+  	font-size:8pt;
+  	letter-spacing:1.5pt;
+  	text-align:left;
   	-webkit-transition: all 500ms ease;
       -moz-transition: all 500ms ease;
       -o-transition: all 500ms ease;
@@ -608,38 +615,38 @@ p.infoText a:hover {
   }
 
   #menu p.header {
-  	font-size: 8px;
-  	color: #4f4f4f;
-  	cursor: default;
+  	font-size:8px;
+  	color:#4F4F4F;
+  	cursor:default;
   }
 
   #menu p.lCol {
   	text-align: right;
-    width: 15%;
-    margin-right: 8%;
+      width: 15%;
+      margin-right: 8%;
   }
 
   #menu p.bRow {
-  	margin-top: 22px;
+  	margin-top:22px;
   }
 
   #menu p.desktop {
-  	display: block;
+  	display:block;
   }
 
   #menu p.mobile {
-  	display: none;
+  	display:none;
   }
 
 }
 
 /*Bio Page*/
-@media (min-width: 640px) {
-  .splash-container {
+@media (min-width:640px) {
+  #bioContainer, #contactContainer {
   	min-height: 533px;
   }
 
-  .splash-container.bio p {
+  #bioContainer p {
   	width: 540px;
   	height: 400px;
   	margin: auto;
@@ -657,48 +664,48 @@ p.infoText a:hover {
   }
 
 
-  .close-toggle {
-  	width: 50px;
-  	height: 20px;
-  	color: #666;
-  	font-family: NovecentoMed;
+  #closeBio, #closeContact {
+  	width:50px;
+  	height:20px;
+  	color:#666;
+  	font-family:NovecentoMed;
   	font-size: 10px;
       letter-spacing: 2.4px;
-  	cursor: pointer;
-  	text-align: center;
-  	position: absolute;
-  	bottom: 100px;
-  	top: auto;
-  	margin: auto;
-  	left: 0;
-  	right: 0;
-  	line-height: 0;
-  	background: none;
-  	border-bottom: 1px solid #666;
+  	cursor:pointer;
+  	text-align:center;
+  	position:absolute;
+  	bottom:100px;
+  	top:auto;
+  	margin:auto;
+  	left:0;
+  	right:0;
+  	line-height:0;
+  	background:none;
+  	border-bottom:1px solid #666666;
   }
 
-  .splash-container.bio .close-toggle:hover {
-  	opacity: 0.7;
+  #closeBio:hover {
+  	opacity:0.7;
   }
 
-  .splash-container.bio .close-toggle span:hover {
-  	opacity: 1;
+  #closeBio span:hover {
+  	opacity:1;
   }
 
   /*Slides*/
   .slidecontrols {
-  	width: 145px;
+  	width:145px;
   	position: absolute;
   	left: 0;
   	top: 4%;
-  	z-index: 110;
-  	display: block;
+  	z-index:110;
+  	display:block;
   }
 
   #homeslides {
-  	width: 640px;
-  	height: 463px;
-  	margin: 0 auto;
+  	width:640px;
+  	height:463px;
+  	margin:0 auto;
   	-webkit-transition: all 500ms ease;
       -moz-transition: all 500ms ease;
       -o-transition: all 500ms ease;
@@ -707,9 +714,9 @@ p.infoText a:hover {
   }
 
   div.allSlides {
-  	width: 640px;
-  	height: 463px;
-  	margin: 0 auto;
+  	width:640px;
+  	height:463px;
+  	margin:0 auto;
   	-webkit-transition: all 900ms ease;
       -moz-transition: all 900ms ease;
       -o-transition: all 900ms ease;
@@ -720,31 +727,31 @@ p.infoText a:hover {
 
 
 /*iPad (portrait)*/
-@media (min-height: 1000px) and (min-width: 760px) {
+@media (min-height: 1000px) and (min-width:760px) {
   .slidecontrols {
-  	width: 145px;
+  	width:145px;
   	position: absolute;
   	left: 0;
   	top: 14%;
-  	z-index: 110;
+  	z-index:110;
   }
 }
 
 /*Desktop (medium)*/
-@media (min-height: 750px) and (min-width: 900px) {
+@media (min-height: 750px) and (min-width:900px) {
 
   #cursorControls {
-  	width: 100%;
-  	height: 575px;
+  	width:100%;
+  	height:575px;
   	position: absolute;
   	left: 0;
-  	z-index: 109;
+  	z-index:109;
   }
 
   #homeslides {
-  	width: 795px;
-  	height: 575px;
-  	margin: 0 auto;
+  	width:795px;
+  	height:575px;
+  	margin:0 auto;
   	-webkit-transition: all 500ms ease;
       -moz-transition: all 500ms ease;
       -o-transition: all 500ms ease;
@@ -753,9 +760,9 @@ p.infoText a:hover {
   }
 
   div.allSlides {
-  	width: 795px;
-  	height: 575px;
-  	margin: 0 auto;
+  	width:795px;
+  	height:575px;
+  	margin:0 auto;
   	-webkit-transition: all 900ms ease;
       -moz-transition: all 900ms ease;
       -o-transition: all 900ms ease;

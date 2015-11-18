@@ -22,13 +22,19 @@
 </script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-<script type="text/javascript" src='avedon/js/jquery.cycle2.min.js'></script>
-<script type="text/javascript" src='avedon/js/jquery.cycle2.swipe.min.js'></script>
-<script type="text/javascript" src='avedon/js/mousetrap.min.js'></script>
-<script type="text/javascript" src='avedon/js/swipe.js'></script>
-<script type="text/javascript" src='avedon/js/jquery.touchSwipe.min.js'></script>
-<script type="text/javascript" src='avedon/js/jquery.fitvids.js'></script>
+<script type="text/javascript" src='avedon/js/libs/jquery.cycle2.min.js'></script>
+<script type="text/javascript" src='avedon/js/libs/jquery.cycle2.swipe.min.js'></script>
+<script type="text/javascript" src='avedon/js/libs/mousetrap.min.js'></script>
+<script type="text/javascript" src='avedon/js/libs/swipe.js'></script>
+<script type="text/javascript" src='avedon/js/libs/jquery.touchSwipe.min.js'></script>
+<script type="text/javascript" src='avedon/js/libs/jquery.fitvids.js'></script>
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'></script>
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js'></script>
 <script type="text/javascript" src='avedon/js/main.js'></script>
+<script type="text/javascript" src='avedon/js/Intro.js'></script>
+<script type="text/javascript" src='avedon/js/SiteContainer.js'></script>
+<script type="text/javascript" src='avedon/js/Menu.js'></script>
+<script type="text/javascript" src='avedon/js/InfoScreen.js'></script>
 <?php include('images.php'); ?>
 
 <!--
@@ -69,9 +75,11 @@ Fitvid.js
 
 <body>
 <div id="screen"></div>
-<div id="introTitle">
-  <p><span>MICHAEL</span> AVEDON</p>
-  <div class="enter">ENTER</div>
+<div id="intro">
+  <div id="introTitle">
+    <p><span>MICHAEL</span> AVEDON</p>
+    <div class="enter">ENTER</div>
+  </div>
 </div>
 <div id="siteContainer">
   <div id="top">
@@ -80,7 +88,7 @@ Fitvid.js
   <div id="middle">
     <div id="middleContainer">
       <div id="homepage" class="active mainElement">
-        <div id="homeslides" class="homeSlides" data-cycle-speed="3000" data-cycle-timeout="3600">
+        <div id="homeslides" class="homeSlides" data-cycle-log="false" data-cycle-speed="3000" data-cycle-timeout="3600">
           <?php printImagesFromFolder('avedon/images/home'); ?>
         </div>
       </div>
@@ -89,7 +97,7 @@ Fitvid.js
   </div>
   <div id="bottom">
     <div>
-      <p>MENU</p>
+      <p id="menuToggle">MENU</p>
     </div>
   </div>
 </div>
@@ -103,16 +111,16 @@ Fitvid.js
     </div>
     <div class="section">
       <p class="lCol bRow header desktop">Info</p>
-      <p class="bRow desktop splash-toggle" data-type="contact">Contact</p>
-      <p class="bRow desktop splash-toggle" data-type="bio">Biography</p>
+      <p class="infoLink bRow desktop" data-category="contact">Contact</p>
+      <p class="infoLink bRow desktop" data-category="bio">Biography</p>
 
-      <p class="splash-toggle mobile" data-type="contact">Contact</p>
-      <p class="splash-toggle mobile" data-type="bio">Biography</p>
+      <p class="infoLink mobile" data-category="contact">Contact</p>
+      <p class="infoLink mobile" data-category="bio">Biography</p>
     </div>
   </div>
 </div>
 
-<div class="splash-container bio">
+<div id="bioContainer">
   <p class="infoText">Michael Avedon, a graduate of the International Center of
   Photography, has begun to develop his photographic
   perspective over the past four years in New York City.
@@ -125,14 +133,14 @@ Fitvid.js
   informed by the photographic legacy of his grandfather
   Richard Avedon.
   </p>
-  <div class="close-toggle"><span>close</span></div>
+  <div id="closeBio" class="closeScreen"><span>close</span></div>
 </div>
 
-<div class="splash-container contact">
+<div id="contactContainer">
   <div id="contactBox">
     <p class="infoText"><a href="mailto:info@michaelavedon.com">info@michaelavedon.com</a></p>
   </div>
-  <div class="close-toggle"><span>close</span></div>
+  <div id="closeContact" class="closeScreen"><span>close</span></div>
 </div>
 </body>
 </html>
