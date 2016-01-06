@@ -63,7 +63,7 @@ Avedon.Menu = Backbone.View.extend({
 
     this.$homeSlides.cycle('pause');
 
-    $('.active').fadeOut(1000, function() {
+    $('.active').fadeOut(1000).promise().done(function() {
       $('#' + category).fadeIn(1200, function() {
         $('.category').removeClass('active');
         $(this).addClass('active');
