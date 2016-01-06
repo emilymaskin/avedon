@@ -92,7 +92,7 @@ Fitvid.js
           <?php printImagesFromFolder('avedon/images/home'); ?>
         </div>
       </div>
-      <?php printAllImages('avedon/images/sections'); ?>
+      <?php printAllImages(); ?>
     </div>
   </div>
   <div id="bottom">

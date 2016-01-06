@@ -2,8 +2,9 @@
 
   function getAllCategories() {
     $categories = array();
-    foreach (scandir('avedon/images/sections') as $i => $folder) {
-      if ($folder == '.' || $folder == '..' || $folder == '.DS_Store') {
+    $path = 'avedon/images/sections';
+    foreach (scandir($path) as $i => $folder) {
+      if ($folder == '.' || $folder == '..' || $folder == '.DS_Store' || !is_dir($path . '/' . $folder)) {
         continue;
       }
       array_push($categories, $folder);
@@ -51,8 +52,8 @@
     }
   }
 
-  function printAllImages($path) {
-    $categories = getAllCategories($path);
+  function printAllImages() {
+    $categories = getAllCategories();
     foreach ($categories as $c) {
       $slug = strtolower($c);
       $title = str_replace('_', ' ', $c);
