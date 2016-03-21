@@ -15,9 +15,9 @@
   function populateMenu() {
     $categories = getAllCategories();
     foreach ($categories as $i=>$c) {
-      $c = ltrim($c, ' 0123456789_');
       $slug = strtolower($c);
-      $title = str_replace('_', ' ', $c);
+      $title = ltrim($c, ' 0123456789_');
+      $title = str_replace('_', ' ', $title);
       if ($i > 0 && $i % 3 == 0) {
         echo "<p class='lCol desktop'></p>";
       }
